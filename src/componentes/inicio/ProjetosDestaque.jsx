@@ -30,7 +30,7 @@ function ProjetosDestaque() {
     {
       id: 3,
       imagem: meteoApp,
-      titulo: 'Meteo App',
+      titulo: 'Meteo',
       descricao: 'App web de dados meteorológicas em tempo real, previsões e mapas interativos.',
       tecnologias: ['React', 'Openweather API', 'API REST'],
       demo: 'https://meteo-7504e.web.app/',
