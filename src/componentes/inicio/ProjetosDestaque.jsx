@@ -3,31 +3,38 @@ import Card from '../comum/Card'
 import Badge from '../comum/Badge'
 import Botao from '../comum/Botao'
 
+import agendaQuanta from "../../assets/projectos/imagens/quanta_agenda.svg"
+import ecomerce from "../../assets/projectos/imagens/ecomerce_moderno.png"
+import meteoApp from "../../assets/projectos/imagens/meteo_app.svg"
+
 function ProjetosDestaque() {
   const projetos = [
     {
       id: 1,
-      titulo: 'E-commerce Moderno',
-      descricao: 'Plataforma completa de vendas online com painel administrativo.',
-      tecnologias: ['React', 'Node.js', 'MongoDB'],
-      demo: 'https://demo.com',
-      github: 'https://github.com',
+      imagem: agendaQuanta, // Imagem do projeto (pode ser uma URL ou importação) 
+      titulo: 'Agenda Escolar Quanta',
+      descricao: 'App web PWA para organização de estudos.',
+      tecnologias: ['React', 'TailwindCSS' ,'Firebase'],
+      demo: 'https://agenda-quanta.web.app/',
+      github: 'https://github.com/Ximana/agenda-quanta',
     },
     {
       id: 2,
-      titulo: 'Dashboard Analítico',
-      descricao: 'Sistema de visualização de dados com gráficos interativos.',
-      tecnologias: ['React', 'D3.js', 'Firebase'],
-      demo: 'https://demo.com',
-      github: 'https://github.com',
+      imagem: ecomerce,
+      titulo: 'E-commerce Moderno',
+      descricao: 'Plataforma completa de vendas online com painel administrativo.',
+      tecnologias: ['Django', 'PostgreSQL', 'Cloudinary'],
+      demo: 'https://ecommerce-art-decor.onrender.com/',
+      github: 'https://github.com/Ximana/ecommerce-Art-Decor',
     },
     {
       id: 3,
-      titulo: 'App de Gestão',
-      descricao: 'Aplicativo mobile para gestão de tarefas e produtividade.',
-      tecnologias: ['React Native', 'Redux', 'API REST'],
-      demo: 'https://demo.com',
-      github: 'https://github.com',
+      imagem: meteoApp,
+      titulo: 'Meteo App',
+      descricao: 'App web de dados meteorológicas em tempo real, previsões e mapas interativos.',
+      tecnologias: ['React', 'Openweather API', 'API REST'],
+      demo: 'https://meteo-7504e.web.app/',
+      github: 'https://github.com/Ximana/Meteo',
     },
   ]
 
@@ -47,7 +54,7 @@ function ProjetosDestaque() {
           {projetos.map((projeto) => (
             <Card key={projeto.id}>
               {/* Imagem do Projeto */}
-              <div className="w-full h-48 bg-gradient-to-br from-primary-400 to-secondary-600 rounded-lg mb-4" />
+              <img src={projeto.imagem} className="w-full h-48 bg-gradient-to-br from-primary-400 to-secondary-600 rounded-lg mb-4" />
 
               {/* Conteúdo */}
               <h3 className="text-xl font-semibold mb-2">{projeto.titulo}</h3>
@@ -71,7 +78,7 @@ function ProjetosDestaque() {
                   className="flex items-center gap-2 text-primary-600 dark:text-primary-400 hover:underline"
                 >
                   <ExternalLink size={16} />
-                  <span>Demo</span>
+                  <span>Ver</span>
                 </a>
                 <a
                   href={projeto.github}

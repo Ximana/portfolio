@@ -1,0 +1,104 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definições de gradientes -->
+  <defs>
+    <!-- Gradiente para o sol -->
+    <linearGradient id="sunGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FCD34D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F59E0B;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Gradiente para a nuvem -->
+    <linearGradient id="cloudGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E5E7EB;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Gradiente para as gotas de chuva -->
+    <linearGradient id="rainGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#60A5FA;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Sombra suave -->
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+    
+    <!-- Sombra para texto -->
+    <filter id="textShadow">
+      <feDropShadow dx="0" dy="1" stdDeviation="1" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Círculo de fundo (opcional, pode remover) -->
+  <circle cx="100" cy="100" r="95" fill="#FEE2E2" opacity="0.3"/>
+  
+  <!-- Sol (atrás da nuvem) -->
+  <g filter="url(#shadow)">
+    <!-- Raios do sol -->
+    <g opacity="0.8">
+      <line x1="100" y1="25" x2="100" y2="35" stroke="url(#sunGradient)" stroke-width="3" stroke-linecap="round"/>
+      <line x1="135" y1="35" x2="130" y2="43" stroke="url(#sunGradient)" stroke-width="3" stroke-linecap="round"/>
+      <line x1="155" y1="60" x2="147" y2="65" stroke="url(#sunGradient)" stroke-width="3" stroke-linecap="round"/>
+      <line x1="65" y1="35" x2="70" y2="43" stroke="url(#sunGradient)" stroke-width="3" stroke-linecap="round"/>
+      <line x1="45" y1="60" x2="53" y2="65" stroke="url(#sunGradient)" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    
+    <!-- Círculo do sol -->
+    <circle cx="100" cy="55" r="18" fill="url(#sunGradient)"/>
+  </g>
+  
+  <!-- Nuvem -->
+  <g filter="url(#shadow)">
+    <!-- Nuvem principal -->
+    <ellipse cx="75" cy="85" rx="22" ry="18" fill="url(#cloudGradient)"/>
+    <ellipse cx="95" cy="80" rx="26" ry="22" fill="url(#cloudGradient)"/>
+    <ellipse cx="115" cy="82" rx="24" ry="20" fill="url(#cloudGradient)"/>
+    <ellipse cx="130" cy="88" rx="20" ry="16" fill="url(#cloudGradient)"/>
+    <rect x="70" y="85" width="65" height="18" fill="url(#cloudGradient)"/>
+    
+    <!-- Contorno da nuvem para dar profundidade -->
+    <path d="M 53 85 Q 53 67 75 67 Q 85 60 95 60 Q 110 60 120 67 Q 140 67 145 85 L 145 95 Q 145 103 135 103 L 65 103 Q 53 103 53 95 Z" 
+          fill="none" stroke="#D1D5DB" stroke-width="1" opacity="0.5"/>
+  </g>
+  
+  <!-- Gotas de chuva -->
+  <g filter="url(#shadow)">
+    <!-- Gota 1 -->
+    <path d="M 80 110 Q 80 105 82 103 Q 84 105 84 110 Q 84 114 82 116 Q 80 114 80 110 Z" 
+          fill="url(#rainGradient)"/>
+    
+    <!-- Gota 2 -->
+    <path d="M 95 115 Q 95 110 97 108 Q 99 110 99 115 Q 99 119 97 121 Q 95 119 95 115 Z" 
+          fill="url(#rainGradient)"/>
+    
+    <!-- Gota 3 -->
+    <path d="M 110 112 Q 110 107 112 105 Q 114 107 114 112 Q 114 116 112 118 Q 110 116 110 112 Z" 
+          fill="url(#rainGradient)"/>
+    
+    <!-- Gota 4 (mais abaixo) -->
+    <path d="M 87 125 Q 87 120 89 118 Q 91 120 91 125 Q 91 129 89 131 Q 87 129 87 125 Z" 
+          fill="url(#rainGradient)" opacity="0.7"/>
+    
+    <!-- Gota 5 (mais abaixo) -->
+    <path d="M 102 128 Q 102 123 104 121 Q 106 123 106 128 Q 106 132 104 134 Q 102 132 102 128 Z" 
+          fill="url(#rainGradient)" opacity="0.7"/>
+  </g>
+  
+  <!-- Texto "METEO" -->
+  <g filter="url(#textShadow)">
+    <text x="100" y="165" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="bold" 
+          fill="#DC2626" text-anchor="middle" letter-spacing="2">
+      METEO
+    </text>
+  </g>
+  
+  <!-- Linha decorativa abaixo do texto -->
+  <line x1="50" y1="175" x2="150" y2="175" stroke="#DC2626" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  
+  <!-- Pequeno tagline -->
+  <text x="100" y="188" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="normal" 
+        fill="#6B7280" text-anchor="middle" letter-spacing="1">
+    WEATHER APP
+  </text>
+</svg>

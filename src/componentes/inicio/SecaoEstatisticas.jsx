@@ -3,8 +3,8 @@ import { Code2, FolderGit2, Users, Coffee } from 'lucide-react'
 function SecaoEstatisticas() {
   const estatisticas = [
     { icone: Code2, numero: '5+', texto: 'Anos de Experiência' },
-    { icone: FolderGit2, numero: '50+', texto: 'Projetos Concluídos' },
-    { icone: Users, numero: '30+', texto: 'Clientes Satisfeitos' },
+    { icone: FolderGit2, numero: '10+', texto: 'Projetos Concluídos' },
+    { icone: Users, numero: '15+', texto: 'Clientes Satisfeitos' },
     { icone: Coffee, numero: '∞', texto: 'Xícaras de Café' },
   ]
 
