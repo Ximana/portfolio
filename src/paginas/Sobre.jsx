@@ -1,3 +1,5 @@
+import foto from "../assets/perfil/foto-perfil.png";
+
 function Sobre() {
   return (
     <div className="section-padding">
@@ -15,14 +17,14 @@ function Sobre() {
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             {/* Foto */}
             <div className="flex justify-center items-start">
-              <div className="w-full max-w-sm h-96 bg-gradient-to-br from-primary-400 to-secondary-600 rounded-2xl" />
+              <img src={foto} className="w-full max-w-sm h-96 bg-gradient-to-br from-primary-400 to-secondary-600 rounded-2xl" />
             </div>
 
             {/* Texto */}
             <div className="space-y-4">
-              <h2 className="text-2xl font-bold">Olá! Sou [Seu Nome]</h2>
+              <h2 className="text-2xl font-bold">Olá! Sou Paulo Ximana</h2>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                Sou um desenvolvedor apaixonado por criar experiências digitais incríveis.
+                Sou um desenvolvedor apaixonado por criar experiências digitais.
                 Com mais de 5 anos de experiência, trabalhei em diversos projetos
                 desafiadores que me permitiram crescer profissionalmente.
               </p>
