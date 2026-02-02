@@ -31,26 +31,26 @@ function Contato() {
     {
       icone: Mail,
       titulo: 'Email',
-      conteudo: 'contato@exemplo.com',
-      link: 'mailto:contato@exemplo.com',
+      conteudo: 'pauloximana@gmail.com',
+      link: 'mailto:pauloximana@gmail.com',
     },
     {
       icone: Phone,
       titulo: 'Telefone',
-      conteudo: '+55 (11) 99999-9999',
-      link: 'tel:+5511999999999',
+      conteudo: '+244 937 123 602',
+      link: 'tel:+244937123602',
     },
     {
       icone: MapPin,
       titulo: 'Localização',
-      conteudo: 'São Paulo, SP - Brasil',
+      conteudo: 'Luanda, Luanda - Angola',
       link: null,
     },
   ]
 
   const redesSociais = [
-    { icone: Github, url: 'https://github.com', label: 'GitHub' },
-    { icone: Linkedin, url: 'https://linkedin.com', label: 'LinkedIn' },
+    { icone: Github, url: 'https://github.com/Ximana', label: 'GitHub' },
+    { icone: Linkedin, url: 'https://www.linkedin.com/in/paulo-ximana-3240a025b/', label: 'LinkedIn' },
     { icone: Twitter, url: 'https://twitter.com', label: 'Twitter' },
   ]
 
@@ -170,7 +170,7 @@ function Contato() {
                     value={formData.telefone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-900 border-2 border-gray-300 dark:border-gray-700 rounded-lg focus:border-primary-500 focus:outline-none transition-colors"
-                    placeholder="(11) 99999-9999"
+                    placeholder="(+244) 912 345 678"
                   />
                 </div>
 
