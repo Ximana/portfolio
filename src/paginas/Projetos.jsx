@@ -8,6 +8,7 @@ import agendaQuanta from "../assets/projectos/imagens/quanta_agenda.svg"
 import ecomerce from "../assets/projectos/imagens/ecomerce_moderno.png"
 import meteoApp from "../assets/projectos/imagens/meteo_app.svg"
 import pulmovision from "../assets/projectos/imagens/pulmovision.png"
+import cinema from "../assets/projectos/imagens/cinema.png"
 
 
 function Projetos() {
@@ -65,6 +66,17 @@ function Projetos() {
       tecnologias: ["React", "Django", "Tensorflow"],
       demo: 'https://pulmovision.onrender.com/',
       github: 'https://github.com/Ximana/PulmoVision',
+    },
+    {
+      id: 5,
+      imagem: cinema,
+      slug: "Cinema",
+      titulo: "Cinema App",
+      descricao: "App mobile que permite aos usuários comprar ingressos de cinema, reservar assentos e gerenciar suas reservas",
+      categoria: "mobile",
+      tecnologias: ["React Native", "Django (API)", "API rest"],
+      demo: '',
+      github: 'https://github.com/Ximana/cinema-app',
     },
   ];
 
