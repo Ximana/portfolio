@@ -1,100 +1,108 @@
-import { useState } from 'react'
-import { Mail, Phone, MapPin, Send } from 'lucide-react'
-import { Github, Linkedin, Twitter } from 'lucide-react'
-import Card from '../componentes/comum/Card'
-import Botao from '../componentes/comum/Botao'
+import { useState } from "react";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Github, Linkedin, Twitter } from "lucide-react";
+import Card from "../componentes/comum/Card";
+import Botao from "../componentes/comum/Botao";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Contato() {
   const [formData, setFormData] = useState({
-    nome: '',
-    email: '',
-    telefone: '',
-    assunto: '',
-    servico: '',
-    mensagem: '',
-  })
+    nome: "",
+    email: "",
+    telefone: "",
+    assunto: "",
+    servico: "",
+    mensagem: "",
+  });
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
-    })
-  }
+    });
+  };
 
-const handleSubmit = async (e) => {
-  e.preventDefault()
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  const formDataToSend = {
-    nome: formData.nome,
-    email: formData.email,
-    telefone: formData.telefone,
-    assunto: formData.assunto,
-    servico: formData.servico,
-    mensagem: formData.mensagem,
-  }
+    const formDataToSend = {
+      nome: formData.nome,
+      email: formData.email,
+      telefone: formData.telefone,
+      assunto: formData.assunto,
+      servico: formData.servico,
+      mensagem: formData.mensagem,
+    };
 
-  try {
-    const response = await fetch('https://formspree.io/f/xojnarjw', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-      },
-      body: JSON.stringify(formDataToSend),
-    })
+    try {
+      const response = await fetch("https://formspree.io/f/xojnarjw", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formDataToSend),
+      });
 
-    if (response.ok) {
-      alert('Mensagem enviada com sucesso!')
-      setFormData({
-        nome: '',
-        email: '',
-        telefone: '',
-        assunto: '',
-        servico: '',
-        mensagem: '',
-      })
-    } else {
-      alert('Erro ao enviar a mensagem. Tente novamente mais tarde.')
+      if (response.ok) {
+        toast.success("Mensagem enviada com sucesso!");
+        setFormData({
+          nome: "",
+          email: "",
+          telefone: "",
+          assunto: "",
+          servico: "",
+          mensagem: "",
+        });
+      } else {
+        toast.error("Erro ao enviar a mensagem. Tente novamente mais tarde.");
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error("Erro de conexão. Verifique sua internet.");
     }
-  } catch (error) {
-    console.error(error)
-    alert('Erro de conexão. Verifique sua internet.')
-  }
-}
-
+  };
 
   const informacoesContato = [
     {
       icone: Mail,
-      titulo: 'Email',
-      conteudo: 'pauloximana@gmail.com',
-      link: 'mailto:pauloximana@gmail.com',
+      titulo: "Email",
+      conteudo: "pauloximana@gmail.com",
+      link: "mailto:pauloximana@gmail.com",
     },
     {
       icone: Phone,
-      titulo: 'Telefone',
-      conteudo: '+244 937 123 602',
-      link: 'tel:+244937123602',
+      titulo: "Telefone",
+      conteudo: "+244 937 123 602",
+      link: "tel:+244937123602",
     },
     {
       icone: MapPin,
-      titulo: 'Localização',
-      conteudo: 'Luanda, Luanda - Angola',
+      titulo: "Localização",
+      conteudo: "Luanda, Luanda - Angola",
       link: null,
     },
-  ]
+  ];
 
   const redesSociais = [
-    { icone: Github, url: 'https://github.com/Ximana', label: 'GitHub' },
-    { icone: Linkedin, url: 'https://www.linkedin.com/in/paulo-ximana-3240a025b/', label: 'LinkedIn' },
-    { icone: Twitter, url: 'https://twitter.com', label: 'Twitter' },
-  ]
+    { icone: Github, url: "https://github.com/Ximana", label: "GitHub" },
+    {
+      icone: Linkedin,
+      url: "https://www.linkedin.com/in/paulo-ximana-3240a025b/",
+      label: "LinkedIn",
+    },
+    { icone: Twitter, url: "https://twitter.com", label: "Twitter" },
+  ];
 
   return (
     <div className="section-padding">
       <div className="container-custom">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Entre em Contato</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            Entre em Contato
+          </h1>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Tem algum projeto em mente? Vamos conversar!
           </p>
@@ -104,13 +112,18 @@ const handleSubmit = async (e) => {
           {/* Coluna Esquerda - Informações */}
           <div className="space-y-6">
             <div>
-              <h2 className="text-2xl font-bold mb-6">Informações de Contato</h2>
+              <h2 className="text-2xl font-bold mb-6">
+                Informações de Contato
+              </h2>
               <div className="space-y-4">
                 {informacoesContato.map((info, index) => (
                   <Card key={index} hover={false}>
                     <div className="flex items-start gap-4">
                       <div className="p-3 bg-primary-100 dark:bg-primary-900/30 rounded-lg">
-                        <info.icone className="text-primary-600 dark:text-primary-400" size={24} />
+                        <info.icone
+                          className="text-primary-600 dark:text-primary-400"
+                          size={24}
+                        />
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">{info.titulo}</h3>
@@ -122,7 +135,9 @@ const handleSubmit = async (e) => {
                             {info.conteudo}
                           </a>
                         ) : (
-                          <p className="text-gray-600 dark:text-gray-400">{info.conteudo}</p>
+                          <p className="text-gray-600 dark:text-gray-400">
+                            {info.conteudo}
+                          </p>
                         )}
                       </div>
                     </div>
@@ -161,10 +176,13 @@ const handleSubmit = async (e) => {
           <div>
             <Card>
               <h2 className="text-2xl font-bold mb-6">Envie uma Mensagem</h2>
-              
+
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label htmlFor="nome" className="block text-sm font-medium mb-2">
+                  <label
+                    htmlFor="nome"
+                    className="block text-sm font-medium mb-2"
+                  >
                     Nome Completo *
                   </label>
                   <input
@@ -180,7 +198,10 @@ const handleSubmit = async (e) => {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium mb-2"
+                  >
                     Email *
                   </label>
                   <input
@@ -196,7 +217,10 @@ const handleSubmit = async (e) => {
                 </div>
 
                 <div>
-                  <label htmlFor="telefone" className="block text-sm font-medium mb-2">
+                  <label
+                    htmlFor="telefone"
+                    className="block text-sm font-medium mb-2"
+                  >
                     Telefone
                   </label>
                   <input
@@ -211,7 +235,10 @@ const handleSubmit = async (e) => {
                 </div>
 
                 <div>
-                  <label htmlFor="servico" className="block text-sm font-medium mb-2">
+                  <label
+                    htmlFor="servico"
+                    className="block text-sm font-medium mb-2"
+                  >
                     Tipo de Serviço *
                   </label>
                   <select
@@ -231,7 +258,10 @@ const handleSubmit = async (e) => {
                 </div>
 
                 <div>
-                  <label htmlFor="assunto" className="block text-sm font-medium mb-2">
+                  <label
+                    htmlFor="assunto"
+                    className="block text-sm font-medium mb-2"
+                  >
                     Assunto *
                   </label>
                   <input
@@ -247,7 +277,10 @@ const handleSubmit = async (e) => {
                 </div>
 
                 <div>
-                  <label htmlFor="mensagem" className="block text-sm font-medium mb-2">
+                  <label
+                    htmlFor="mensagem"
+                    className="block text-sm font-medium mb-2"
+                  >
                     Mensagem *
                   </label>
                   <textarea
@@ -262,7 +295,11 @@ const handleSubmit = async (e) => {
                   />
                 </div>
 
-                <Botao tipo="submit" variante="primary" className="w-full justify-center">
+                <Botao
+                  tipo="submit"
+                  variante="primary"
+                  className="w-full justify-center"
+                >
                   <Send className="inline-block mr-2" size={20} />
                   Enviar Mensagem
                 </Botao>
@@ -271,8 +308,19 @@ const handleSubmit = async (e) => {
           </div>
         </div>
       </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
-  )
+  );
 }
 
-export default Contato
+export default Contato;
