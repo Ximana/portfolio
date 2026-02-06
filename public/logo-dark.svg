@@ -1,0 +1,45 @@
+<svg width="300" height="80" viewBox="0 0 300 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="darkLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#a78bfa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c084fc;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="darkTextGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#dbeafe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e9d5ff;stop-opacity:1" />
+    </linearGradient>
+
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+      <feComponentTransfer in="blur" result="bright">
+        <feFuncA type="linear" slope="1.5"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode in="bright"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Símbolo/Ícone com efeito glow -->
+  <g filter="url(#glow)">
+    <path d="M 15 20 L 15 60 L 25 60 L 25 42 L 35 42 C 42 42 45 38 45 32 C 45 26 42 22 35 22 L 25 22 L 25 32 L 33 32 C 35 32 35 34 33 34 L 25 34 L 25 22 Z" fill="url(#darkLogoGradient)"/>
+    <path d="M 40 20 L 30 40 L 20 20 L 13 24 L 26 48 L 13 56 L 20 60 L 30 48 L 40 60 L 47 56 L 34 48 L 47 24 Z" fill="url(#darkLogoGradient)" opacity="0.9"/>
+    <circle cx="50" cy="25" r="4" fill="#34d399"/>
+  </g>
+
+  <!-- Texto -->
+  <g>
+    <text x="70" y="38" font-family="'Inter', sans-serif" font-size="28" font-weight="700" fill="url(#darkTextGradient)" letter-spacing="-0.5">
+      PAULO
+    </text>
+    <text x="70" y="62" font-family="'Inter', sans-serif" font-size="24" font-weight="400" fill="#cbd5e1" letter-spacing="0.5">
+      XIMANA
+    </text>
+    <text x="72" y="72" font-family="'Fira Code', monospace" font-size="9" font-weight="400" fill="#94a3b8" letter-spacing="1">
+      DEVELOPER
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,53 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="darkBgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    </linearGradient>
+    
+    <pattern id="darkDots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#60a5fa" opacity="0.2"/>
+    </pattern>
+    
+    <pattern id="darkGrid" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#334155" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+    
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0" />
+    </radialGradient>
+    
+    <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Fundo escuro base -->
+  <rect width="1200" height="800" fill="url(#darkBgGradient)"/>
+  
+  <!-- Grid -->
+  <rect width="1200" height="800" fill="url(#darkGrid)"/>
+  
+  <!-- Dots -->
+  <rect width="1200" height="800" fill="url(#darkDots)"/>
+  
+  <!-- Glows suaves -->
+  <circle cx="200" cy="200" r="300" fill="url(#glow1)"/>
+  <circle cx="1000" cy="600" r="400" fill="url(#glow2)"/>
+  <circle cx="600" cy="400" r="250" fill="url(#glow1)"/>
+  
+  <!-- Formas geométricas -->
+  <g opacity="0.1">
+    <circle cx="100" cy="100" r="150" fill="#60a5fa"/>
+    <circle cx="1000" cy="600" r="200" fill="#a78bfa"/>
+    <rect x="800" y="100" width="300" height="300" fill="#7c3aed" transform="rotate(15 950 250)"/>
+  </g>
+  
+  <!-- Linhas decorativas com glow -->
+  <g opacity="0.15" stroke="url(#glow1)" stroke-width="3" fill="none">
+    <path d="M 0 200 Q 300 250 600 200 T 1200 200" filter="url(#glow)"/>
+    <path d="M 0 400 Q 400 450 800 400 T 1200 400"/>
+  </g>
+</svg>

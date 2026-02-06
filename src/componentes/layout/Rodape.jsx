@@ -1,21 +1,25 @@
-import { Link } from 'react-router-dom'
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react'
+import { Link } from "react-router-dom";
+import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 
 function Rodape() {
-  const anoAtual = new Date().getFullYear()
+  const anoAtual = new Date().getFullYear();
 
   const linksSociais = [
-    { icone: Github, url: 'https://github.com/Ximana', label: 'GitHub' },
-    { icone: Linkedin, url: 'https://www.linkedin.com/in/paulo-ximana-3240a025b/', label: 'LinkedIn' },
-    { icone: Mail, url: 'mailto:pauloximana@gmail.com', label: 'Email' },
-  ]
+    { icone: Github, url: "https://github.com/Ximana", label: "GitHub" },
+    {
+      icone: Linkedin,
+      url: "https://www.linkedin.com/in/paulo-ximana-3240a025b/",
+      label: "LinkedIn",
+    },
+    { icone: Mail, url: "mailto:pauloximana@gmail.com", label: "Email" },
+  ];
 
   const linksRapidos = [
-    { para: '/', texto: 'Início' },
-    { para: '/sobre', texto: 'Sobre' },
-    { para: '/projetos', texto: 'Projetos' },
-    { para: '/contato', texto: 'Contato' },
-  ]
+    { para: "/", texto: "Início" },
+    { para: "/sobre", texto: "Sobre" },
+    { para: "/projetos", texto: "Projetos" },
+    { para: "/contato", texto: "Contato" },
+  ];
 
   return (
     <footer className="bg-gray-900 text-gray-300 py-12 md:py-16">
@@ -23,7 +27,12 @@ function Rodape() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Coluna 1 - Logo e Descrição */}
           <div>
-            <h3 className="text-2xl font-bold text-white mb-4">Portfolio</h3>
+            <img
+              src="/logo-icone.svg"
+              alt="Paulo Ximana"
+              className="w-16 h-16 mb-4"
+            />
+            <h3 className="text-2xl font-bold text-white mb-4">Paulo Ximana</h3>
             <p className="text-gray-400 mb-4">
               Desenvolvedor Full Stack criando experiências digitais incríveis.
             </p>
@@ -86,15 +95,22 @@ function Rodape() {
           </div>
         </div>
 
-        {/* Linha de Copyright */}
-        <div className="pt-8 border-t border-gray-800 text-center text-gray-400">
-          <p>
-            © {anoAtual} Paulo Ximana. Todos os direitos reservados.
-          </p>
+        {/* Assinatura e Copyright */}
+        <div className="pt-8 border-t border-gray-800">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <img
+              src="/src/assets/imagens/signature.svg"
+              alt="Assinatura Paulo Ximana"
+              className="h-12 opacity-70"
+            />
+            <p className="text-gray-400 text-center md:text-right">
+              © {anoAtual} Paulo Ximana. Todos os direitos reservados.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }
 
-export default Rodape
+export default Rodape;

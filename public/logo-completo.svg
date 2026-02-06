@@ -1,0 +1,58 @@
+<svg width="300" height="80" viewBox="0 0 300 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definição de gradientes -->
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4c1d95;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Filtro para sombra suave -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+      <feOffset dx="0" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Símbolo/Ícone - Monograma PX -->
+  <g filter="url(#shadow)">
+    <!-- Forma geométrica que representa P e X entrelaçados -->
+    <path d="M 15 20 L 15 60 L 25 60 L 25 42 L 35 42 C 42 42 45 38 45 32 C 45 26 42 22 35 22 L 25 22 L 25 32 L 33 32 C 35 32 35 34 33 34 L 25 34 L 25 22 Z" fill="url(#logoGradient)"/>
+    
+    <!-- X entrelaçado -->
+    <path d="M 40 20 L 30 40 L 20 20 L 13 24 L 26 48 L 13 56 L 20 60 L 30 48 L 40 60 L 47 56 L 34 48 L 47 24 Z" fill="url(#logoGradient)" opacity="0.9"/>
+    
+    <!-- Elemento decorativo - ponto de destaque -->
+    <circle cx="50" cy="25" r="4" fill="#10b981"/>
+  </g>
+
+  <!-- Texto PAULO XIMANA -->
+  <g>
+    <!-- PAULO -->
+    <text x="70" y="38" font-family="'Inter', sans-serif" font-size="28" font-weight="700" fill="url(#textGradient)" letter-spacing="-0.5">
+      PAULO
+    </text>
+    
+    <!-- XIMANA -->
+    <text x="70" y="62" font-family="'Inter', sans-serif" font-size="24" font-weight="400" fill="#6b7280" letter-spacing="0.5">
+      XIMANA
+    </text>
+    
+    <!-- Subtitle/Tagline -->
+    <text x="72" y="72" font-family="'Fira Code', monospace" font-size="9" font-weight="400" fill="#9ca3af" letter-spacing="1">
+      DEVELOPER
+    </text>
+  </g>
+</svg>

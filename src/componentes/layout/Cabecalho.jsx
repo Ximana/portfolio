@@ -13,8 +13,12 @@ function Cabecalho() {
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold text-gradient">
-            Portfolio
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/logo-completo.svg" 
+              alt="Paulo Ximana - Desenvolvedor Full Stack"
+              className="h-10 md:h-12 transition-transform hover:scale-105"
+            />
           </Link>
 
           {/* Navegação Desktop */}

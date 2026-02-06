@@ -12,8 +12,12 @@ function NaoEncontrado() {
             404
           </div>
 
-          {/* Ilustração */}
-          <div className="w-64 h-64 mx-auto mb-8 bg-gradient-to-br from-primary-400 to-secondary-600 rounded-full opacity-20" />
+          {/* Ilustração personalizada */}
+          <img 
+            src="/404-illustration.svg"
+            alt="Página não encontrada"
+            className="w-80 h-80 mx-auto mb-8"
+          />
 
           {/* Mensagem */}
           <h1 className="text-4xl font-bold mb-4">
