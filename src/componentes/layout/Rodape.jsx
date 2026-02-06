@@ -5,10 +5,9 @@ function Rodape() {
   const anoAtual = new Date().getFullYear()
 
   const linksSociais = [
-    { icone: Github, url: 'https://github.com', label: 'GitHub' },
-    { icone: Linkedin, url: 'https://linkedin.com', label: 'LinkedIn' },
-    { icone: Twitter, url: 'https://twitter.com', label: 'Twitter' },
-    { icone: Mail, url: 'mailto:contato@exemplo.com', label: 'Email' },
+    { icone: Github, url: 'https://github.com/Ximana', label: 'GitHub' },
+    { icone: Linkedin, url: 'https://www.linkedin.com/in/paulo-ximana-3240a025b/', label: 'LinkedIn' },
+    { icone: Mail, url: 'mailto:pauloximana@gmail.com', label: 'Email' },
   ]
 
   const linksRapidos = [
