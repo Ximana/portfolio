@@ -32,12 +32,22 @@
 
   /* Keyframes */
   @keyframes fade-in {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
   @keyframes slide-up {
-    0% { transform: translateY(50px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 }
 
@@ -56,8 +66,30 @@
     @apply bg-gray-900 text-white;
   }
 
-  html, body, #root {
+  html,
+  body,
+  #root {
     @apply min-h-screen;
+  }
+
+  /* Background da secao hero */
+
+  .bg-hero-light {
+    background-image: url("../assets/imagens/background-pattern.svg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .dark .bg-hero-dark {
+    background-image: url("../assets/imagens/background-pattern-dark.svg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Garante que o container de conteúdo fique acima do fundo */
+  .hero-content-z {
+    position: relative;
+    z-index: 10;
   }
 }
 

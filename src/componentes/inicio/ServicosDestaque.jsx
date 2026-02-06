@@ -6,7 +6,7 @@ function ServicosDestaque() {
     {
       icone: Monitor,
       titulo: 'Desenvolvimento Web',
-      descricao: 'Criação de sites e aplicações web modernas, responsivas e performáticas.',
+      descricao: 'Criação de sites e aplicações web modernas e responsivas.',
     },
     {
       icone: Smartphone,
@@ -16,7 +16,7 @@ function ServicosDestaque() {
     {
       icone: MessageSquare,
       titulo: 'Consultoria Técnica',
-      descricao: 'Análise de sistemas, otimização de performance e code review profissional.',
+      descricao: 'Análise de sistemas, otimização de performance e code review.',
     },
   ]
 
@@ -28,7 +28,7 @@ function ServicosDestaque() {
             Serviços Oferecidos
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Soluções completas para transformar suas ideias em realidade digital
+            Soluções para transformar suas ideias em realidade digital
           </p>
         </div>
 

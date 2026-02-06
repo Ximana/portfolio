@@ -14,7 +14,7 @@ function NaoEncontrado() {
 
           {/* Ilustração personalizada */}
           <img 
-            src="/404-illustration.svg"
+            src="/src/assets/imagens/404-illustration.svg"
             alt="Página não encontrada"
             className="w-80 h-80 mx-auto mb-8"
           />
