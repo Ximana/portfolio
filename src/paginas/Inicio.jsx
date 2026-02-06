@@ -8,7 +8,7 @@ function Inicio() {
   return (
     <div>
       <SecaoHero />
-      <SecaoEstatisticas />
+      {/* <SecaoEstatisticas /> */}
       <ServicosDestaque />
       <ProjetosDestaque />
       <SecaoCTA />

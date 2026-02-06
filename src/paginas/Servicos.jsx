@@ -15,7 +15,7 @@ function Servicos() {
         'Web apps',
         'Painel administrativo',
       ],
-      preco: 'A partir de R$ 5.000',
+      preco: 'A partir de ~250 000 Kz',
     },
     {
       icone: Smartphone,
@@ -28,7 +28,7 @@ function Servicos() {
         'Integração com APIs',
         'Publicação nas lojas',
       ],
-      preco: 'A partir de R$ 8.000',
+      preco: 'A partir de ~350 000 Kz',
     },
     {
       icone: MessageSquare,
@@ -41,7 +41,7 @@ function Servicos() {
         'Mentoria técnica',
         'Code review',
       ],
-      preco: 'R$ 200/hora',
+      preco: '~50 000 Kz por hora',
     },
   ]
 

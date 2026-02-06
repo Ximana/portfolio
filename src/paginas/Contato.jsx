@@ -21,11 +21,47 @@ function Contato() {
     })
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log('Formulário enviado:', formData)
-    alert('Mensagem enviada com sucesso! (Este é apenas um exemplo)')
+const handleSubmit = async (e) => {
+  e.preventDefault()
+
+  const formDataToSend = {
+    nome: formData.nome,
+    email: formData.email,
+    telefone: formData.telefone,
+    assunto: formData.assunto,
+    servico: formData.servico,
+    mensagem: formData.mensagem,
   }
+
+  try {
+    const response = await fetch('https://formspree.io/f/xojnarjw', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: JSON.stringify(formDataToSend),
+    })
+
+    if (response.ok) {
+      alert('Mensagem enviada com sucesso!')
+      setFormData({
+        nome: '',
+        email: '',
+        telefone: '',
+        assunto: '',
+        servico: '',
+        mensagem: '',
+      })
+    } else {
+      alert('Erro ao enviar a mensagem. Tente novamente mais tarde.')
+    }
+  } catch (error) {
+    console.error(error)
+    alert('Erro de conexão. Verifique sua internet.')
+  }
+}
+
 
   const informacoesContato = [
     {

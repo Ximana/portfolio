@@ -135,6 +135,28 @@ function Projetos() {
 
               {/* Links */}
               <div className="flex gap-4">
+                <a
+                  href={projeto.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-primary-600 dark:text-primary-400 hover:underline"
+                >
+                  <ExternalLink size={16} />
+                  <span>Ver</span>
+                </a>
+                <a
+                  href={projeto.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:underline"
+                >
+                  <Github size={16} />
+                  <span>Código</span>
+                </a>
+              </div>
+
+              {/* Links - links para a pagina de detalhes do projecto
+              <div className="flex gap-4">
                 <Link
                   to={`/projetos/${projeto.slug}`}
                   className="text-primary-600 dark:text-primary-400 hover:underline font-medium"
@@ -151,6 +173,7 @@ function Projetos() {
                   Demo
                 </a>
               </div>
+              */}
             </Card>
           ))}
         </div>

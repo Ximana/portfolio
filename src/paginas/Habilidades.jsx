@@ -21,6 +21,7 @@ function Habilidades() {
         { nome: 'Node.js', nivel: 85 },
         { nome: 'Express', nivel: 80 },
         { nome: 'Python', nivel: 75 },
+        { nome: 'Django', nivel: 75 },
         { nome: 'API REST', nivel: 90 },
       ],
     },
@@ -39,7 +40,6 @@ function Habilidades() {
       icone: Smartphone,
       habilidades: [
         { nome: 'React Native', nivel: 80 },
-        { nome: 'Flutter', nivel: 70 },
         { nome: 'PWA', nivel: 85 },
       ],
     },

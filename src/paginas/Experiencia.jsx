@@ -2,7 +2,9 @@ import { Briefcase, GraduationCap } from 'lucide-react'
 import Badge from '../componentes/comum/Badge'
 
 function Experiencia() {
+  
   const experiencias = [
+    
     {
       cargo: 'Desenvolvedor Full Stack',
       empresa: 'Empresa Tech XYZ',
@@ -31,16 +33,22 @@ function Experiencia() {
 
   const educacao = [
     {
-      curso: 'Bacharelado em Ciência da Computação',
-      instituicao: 'Universidade Federal',
-      periodo: '2016 - 2020',
-      descricao: 'Formação sólida em fundamentos de programação e arquitetura de software.',
+      curso: 'Licenciatura em Ciência da Computação (IMETRO)',
+      instituicao: 'Instituto Superior Metropolitano de Angola',
+      periodo: '2021 - 2025',
+      descricao: 'Formação sólida em Computação.',
     },
     {
       curso: 'Curso de Desenvolvimento Web Full Stack',
       instituicao: 'Plataforma Online',
       periodo: '2019',
-      descricao: 'Especialização em tecnologias modernas de desenvolvimento web.',
+      descricao: 'Especialização em tecnologias de desenvolvimento web.',
+    },
+    {
+      curso: 'Informática de Gestão',
+      instituicao: 'Instituto Médio Comercial de Luanda (IMCL)',
+      periodo: '2019',
+      descricao: 'Fundamentos em informática, e bases de organização e administração de empresas.',
     },
   ]
 
