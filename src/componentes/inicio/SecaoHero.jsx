@@ -1,3 +1,4 @@
+
 import { Download, ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import Botao from "../comum/Botao";
 import foto from "../../assets/perfil/foto-perfil.png";

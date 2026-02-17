@@ -5,11 +5,12 @@ const linksNavegacao = [
   { para: '/sobre', texto: 'Sobre' },
   { para: '/projetos', texto: 'Projetos' },
   { para: '/habilidades', texto: 'Habilidades' },
-  { para: '/experiencia', texto: 'Experiência' },
   { para: '/servicos', texto: 'Serviços' },
-  { para: '/blog', texto: 'Blog' },
   { para: '/contato', texto: 'Contato' },
 ]
+
+  {/*{ para: '/experiencia', texto: 'Experiência' },
+     para: '/blog', texto: 'Blog' },*/}
 
 function MenuMobile({ aberto, fechar }) {
   if (!aberto) return null
