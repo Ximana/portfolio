@@ -30,7 +30,7 @@ function SecaoHero() {
 
           <div className="space-y-4">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-              Olá, sou <span className="text-gradient">Paulo Ximana</span>
+              {/*Olá, sou*/} <span className="text-gradient">Paulo Ximana</span>
             </h1>
             <h2 className="text-2xl md:text-3xl text-gray-600 dark:text-gray-300 font-medium">
               Desenvolvedor Full Stack
