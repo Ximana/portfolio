@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import assinatura from "../../assets/imagens/signature.svg";
 
 function Rodape() {
   const anoAtual = new Date().getFullYear();
@@ -99,7 +100,7 @@ function Rodape() {
         <div className="pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <img
-              src="/src/assets/imagens/signature.svg"
+              src={assinatura}
               alt="Assinatura Paulo Ximana"
               className="h-12 opacity-70"
             />
