@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --fonte-texto: "Inter", system-ui, sans-serif;
+  --fonte-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /*
+    Tema claro. Valores em "R G B" (sem vírgulas) para que as classes Tailwind
+    com opacidade (ex.: bg-jade/10) continuem a funcionar.
+  */
+  --cor-fundo: 247 248 246;
+  --cor-superficie: 255 255 255;
+  --cor-linha: 222 227 224;
+  --cor-marfim: 16 22 24;
+  --cor-esbatido: 84 94 91;
+  --cor-jade: 14 122 91;
+  --cor-jade-escuro: 10 100 74;
+  --cor-ouro: 150 104 10;
+}
+
+html.dark {
+  /* Tema escuro, predefinido para quem não tem preferência guardada. */
+  --cor-fundo: 10 13 14;
+  --cor-superficie: 17 22 23;
+  --cor-linha: 36 44 45;
+  --cor-marfim: 236 239 236;
+  --cor-esbatido: 143 153 150;
+  --cor-jade: 72 196 154;
+  --cor-jade-escuro: 54 168 128;
+  --cor-ouro: 224 186 100;
+  color-scheme: dark;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-fundo font-texto text-base leading-7 text-marfim antialiased;
+    font-feature-settings: "cv11", "ss03";
+    min-height: 100dvh;
+  }
+
+  /* Atmosfera: grelha técnica subtil que desvanece + brilho suave no topo. */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgb(var(--cor-marfim) / 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(var(--cor-marfim) / 0.045) 1px, transparent 1px);
+    background-size: 64px 64px;
+    -webkit-mask-image: radial-gradient(ellipse 85% 55% at 50% 0%, #000 20%, transparent 72%);
+    mask-image: radial-gradient(ellipse 85% 55% at 50% 0%, #000 20%, transparent 72%);
+  }
+
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(
+      640px 420px at 82% -6%,
+      rgb(var(--cor-jade) / 0.13),
+      transparent 70%
+    );
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight text-marfim;
+    text-wrap: balance;
+  }
+
+  p { text-wrap: pretty; }
+
+  ::selection { background: rgb(var(--cor-jade) / 0.28); }
+}
+
+@layer components {
+  /* Largura e margens laterais únicas para todo o site. */
+  .contentor {
+    @apply mx-auto w-full max-w-6xl px-6 md:px-8;
+  }
+
+  /* Etiqueta técnica em monoespaçada, usada acima dos títulos. */
+  .etiqueta-mono {
+    @apply font-mono text-xs font-medium uppercase tracking-[0.14em] text-jade;
+  }
+
+  .painel {
+    @apply rounded-2xl border border-linha bg-superficie shadow-cartao;
+  }
+}
+
+/* Fundo do Herói: imagem + esbatimento nas margens inferior e esquerda. */
+.hero-fundo {
+  background-image: url("/imagens/hero/fundo-hero.svg");
+  -webkit-mask-image:
+    linear-gradient(to bottom, #000 62%, transparent 100%),
+    linear-gradient(to right, transparent 0%, #000 38%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to bottom, #000 62%, transparent 100%),
+    linear-gradient(to right, transparent 0%, #000 38%);
+  mask-composite: intersect;
+}
+
+/* Sequência de entrada do Herói. */
+@keyframes entrada-heroi {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.entrada-heroi {
+  opacity: 0;
+  animation: entrada-heroi 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: var(--atraso-entrada, 0ms);
+}
+
+/* Suaviza a mudança de tema apenas durante o instante da troca. */
+html.tema-transicao,
+html.tema-transicao *,
+html.tema-transicao *::before,
+html.tema-transicao *::after {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    fill 0.3s ease,
+    stroke 0.3s ease !important;
+}
+
+/* Foco visível para navegação por teclado */
+:focus-visible {
+  outline: 2px solid rgb(var(--cor-jade));
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .entrada-heroi { opacity: 1; }
+}
+
+/* Impressão: usada pela página /cv para gerar o PDF em A4, sempre em tema claro. */
+@page {
+  size: A4;
+  margin: 16mm 15mm;
+}
+
+@media print {
+  html,
+  html.dark {
+    --cor-fundo: 255 255 255;
+    --cor-superficie: 255 255 255;
+    --cor-linha: 215 220 218;
+    --cor-marfim: 16 22 24;
+    --cor-esbatido: 84 94 91;
+    --cor-jade: 14 122 91;
+    color-scheme: light;
+  }
+
+  body {
+    background: #fff;
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+
+  body::before,
+  body::after,
+  header[role="banner"],
+  body > header,
+  body > footer,
+  footer,
+  .nao-imprimir {
+    display: none !important;
+  }
+
+  .cv header {
+    display: block !important;
+  }
+
+  .cv {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}

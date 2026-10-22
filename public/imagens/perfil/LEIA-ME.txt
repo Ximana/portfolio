@@ -1,0 +1,3 @@
+perfil.jpg é um placeholder gerado automaticamente (800×800px, com a identidade
+visual do site), substitui-o por uma fotografia real tua, com o mesmo nome de
+ficheiro e idealmente as mesmas dimensões (quadrada, 800×800px ou maior).

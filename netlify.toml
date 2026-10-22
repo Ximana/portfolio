@@ -1,0 +1,13 @@
+# Configuração para o Netlify (alternativa à Vercel).
+# O Netlify detecta o Next.js e instala sozinho o adaptador oficial; este
+# ficheiro só fixa o comando de build e a versão do Node.
+# Variáveis de ambiente: Site configuration > Environment variables
+# (ver docs/05-variaveis-de-ambiente.md).
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NEXT_TELEMETRY_DISABLED = "1"
