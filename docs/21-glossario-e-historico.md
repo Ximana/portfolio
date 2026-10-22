@@ -58,9 +58,11 @@
 ### Preparação para publicação (deploy)
 
 **Técnico**
-- Hooks renomeados de `usar...` para `use...` (`useNoEcra`, `useDeteccaoScroll`, `useTema`): a regra `react-hooks/rules-of-hooks` não reconhece o prefixo `usar` e fazia o `next build` falhar no lint.
+- Migração Next.js 14.2.5 para 16.4.2 e React 18.3.1 para 19.1.10 (`npm audit --omit=dev`: 0 vulnerabilidades). Alterações necessárias: `params` assíncrono em `projectos/[slug]/page.tsx` e `opengraph-image.tsx`; ESLint 9 com `eslint.config.mjs` (substitui `.eslintrc.json`; `next lint` já não existe); scripts `lint` (`eslint .`) e `type-check` (`next typegen && tsc --noEmit`).
+- Três efeitos de arranque (`Cabecalho`, `FormularioContacto`, `ContextoTema`) anotados com `eslint-disable-next-line react-hooks/set-state-in-effect` e justificação (leitura do DOM/URL só no navegador).
+- Hooks renomeados de `usar...` para `use...` (`useNoEcra`, `useDeteccaoScroll`, `useTema`): a regra `react-hooks/rules-of-hooks` não reconhece o prefixo `usar`.
 - Gradiente radial das imagens de partilha (`imagemSocial.tsx`) corrigido para a sintaxe suportada pelo `next/og`; antes, o build falhava ao gerar `/opengraph-image` e `/twitter-image`.
-- Next.js actualizado de 14.2.5 para 14.2.35 (correcções de segurança da linha 14), `eslint-config-next` alinhado, PostCSS 8.5.31 e dependências transitivas corrigidas com `npm audit fix`.
+- PostCSS 8.5.31, `@types/node` 22 e dependências transitivas corrigidas com `npm audit fix`.
 - `engines.node` (`22.x`) e `.nvmrc`.
 - `next.config.mjs`: cabeçalho HSTS, cache dos ficheiros de `public/imagens` e `public/ficheiros`, URL do site automático na Vercel (`VERCEL_PROJECT_PRODUCTION_URL`) e modo `standalone` opcional (`BUILD_STANDALONE=true`).
 
@@ -69,7 +71,7 @@
 - `.env.example` completo (inclui as variáveis de verificação do Google e do Bing); `.gitignore` com `.vercel`.
 
 **Documentação**
-- Guia de deploy ([15](15-publicacao-e-deploy.md)) reescrito; actualizados 02, 03, 05, 16, 17, 18, 19 e o README.
+- Guia de deploy ([15](15-publicacao-e-deploy.md)) reescrito; actualizados 01, 02, 03, 05, 15 a 20 e o README.
 
 ### Versão actual: redesenho completo
 

@@ -17,7 +17,7 @@ O site fica disponível em `http://localhost:3000`. Requer Node.js 22 (ver `.nvm
 
 Resumo (guia completo em [`docs/15-publicacao-e-deploy.md`](docs/15-publicacao-e-deploy.md)):
 
-1. Verificar localmente: `npm run type-check && npm run lint && npm run build`.
+1. Verificar localmente: `npm run type-check && npm run lint && npm run build` (o build do Next.js 16 já não corre o lint).
 2. Enviar o projecto para um repositório Git (GitHub, GitLab ou Bitbucket).
 3. Na [Vercel](https://vercel.com): **Add New Project**, importar o repositório (o Next.js é detectado sozinho, o `vercel.json` já está configurado) e acrescentar as variáveis de ambiente de `.env.example` (`NEXT_PUBLIC_URL_SITE`, `NEXT_PUBLIC_FORMSPREE_ID`). **Deploy**.
 4. Ligar o domínio próprio em **Settings, Domains**, definir `NEXT_PUBLIC_URL_SITE` com o domínio final e refazer o deploy.
@@ -59,7 +59,7 @@ portfolio-paulo-ximana/
     └── estilos/             Configuração de tipografia (next/font)
 ```
 
-**Nota sobre nomes em inglês:** ficheiros e pastas com nomes fixos por convenção de ferramentas, `package.json`, `tsconfig.json`, `next.config.mjs`, `tailwind.config.ts`, `.eslintrc.json`, `next-env.d.ts`, a pasta `app/` e os seus ficheiros especiais (`page.tsx`, `layout.tsx`, `loading.tsx`, `not-found.tsx`, `sitemap.ts`, `robots.ts`, `icon.tsx`, `apple-icon.tsx`), e a pasta `public/`, mantêm-se em inglês porque são exigidos pelas próprias ferramentas (Next.js, npm, TypeScript, ESLint). Todo o resto, pastas, componentes, variáveis, conteúdo, está em português.
+**Nota sobre nomes em inglês:** ficheiros e pastas com nomes fixos por convenção de ferramentas, `package.json`, `tsconfig.json`, `next.config.mjs`, `tailwind.config.ts`, `eslint.config.mjs`, `next-env.d.ts`, a pasta `app/` e os seus ficheiros especiais (`page.tsx`, `layout.tsx`, `loading.tsx`, `not-found.tsx`, `sitemap.ts`, `robots.ts`, `icon.tsx`, `apple-icon.tsx`), e a pasta `public/`, mantêm-se em inglês porque são exigidos pelas próprias ferramentas (Next.js, npm, TypeScript, ESLint). Todo o resto, pastas, componentes, variáveis, conteúdo, está em português.
 
 ## Ícone do site
 

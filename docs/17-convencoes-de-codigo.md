@@ -4,7 +4,7 @@
 
 Todo o código autoral está em **português** (Angola/Portugal): nomes de pastas, componentes, variáveis, funções, comentários e conteúdo. Mantêm-se em inglês apenas os nomes impostos pelas ferramentas:
 
-- Ficheiros de configuração: `package.json`, `tsconfig.json`, `next.config.mjs`, `tailwind.config.ts`, `postcss.config.mjs`, `.eslintrc.json`, `next-env.d.ts`.
+- Ficheiros de configuração: `package.json`, `tsconfig.json`, `next.config.mjs`, `tailwind.config.ts`, `postcss.config.mjs`, `eslint.config.mjs`, `next-env.d.ts`.
 - Convenções do Next.js: pasta `app/` e ficheiros `page.tsx`, `layout.tsx`, `loading.tsx`, `not-found.tsx`, `sitemap.ts`, `robots.ts`, `manifest.ts`, `icon.tsx`, `apple-icon.tsx`, `opengraph-image.tsx`, `twitter-image.tsx`, e as funções `generateMetadata`, `generateStaticParams`.
 - A pasta `public/`.
 - Termos técnicos sem tradução corrente (`slug`, `hook`, `build`, `deploy`).
@@ -14,7 +14,7 @@ Todo o código autoral está em **português** (Angola/Portugal): nomes de pasta
 | Elemento | Convenção | Exemplo |
 |---|---|---|
 | Componentes | `PascalCase`, ficheiro com o mesmo nome | `CartaoProjecto.tsx` |
-| Hooks | `use` + `PascalCase` (prefixo em inglês, exigido pela regra `react-hooks/rules-of-hooks`; um `usar...` faz o `lint` e o build falharem) | `useNoEcra.ts` |
+| Hooks | `use` + `PascalCase` (prefixo em inglês, exigido pela regra `react-hooks/rules-of-hooks`; um `usar...` faz o `lint` falhar) | `useNoEcra.ts` |
 | Funções e variáveis | `camelCase` | `criarMetadata`, `projectoAnterior` |
 | Constantes de módulo | `camelCase` (ou `MAIUSCULAS` para chaves) | `urlSite`, `CHAVE_ARMAZENAMENTO_TEMA` |
 | Tipos e interfaces | `PascalCase` | `Projecto`, `EstadoProjecto` |

@@ -21,7 +21,7 @@ Executar `npm run verificar-conteudo` para a lista actual. A estrutura (estudo d
 | Melhoria | Benefício | Esforço |
 |---|---|---|
 | Análise de tráfego respeitadora da privacidade (Plausible, Umami ou Vercel Analytics) | Saber de onde vêm as visitas | Baixo |
-| Migrar o Next.js 14 para uma versão suportada (15 ou 16), com `npm audit` limpo | Fecha avisos de segurança sem correcção na linha 14 | Médio |
+| Migrar para o Tailwind 4 (resolve os últimos avisos do `npm audit`, só de ferramentas de desenvolvimento) | `npm audit` totalmente limpo | Médio |
 | Testes automáticos (a integração contínua já existe, ver [18](18-qualidade-e-testes.md)) | Menos regressões | Médio |
 | Fontes auto-alojadas (`next/font/local` ou Fontsource) | Builds sem depender do Google Fonts | Baixo |
 | `Content-Security-Policy` | Mais segurança | Médio |

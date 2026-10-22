@@ -17,7 +17,8 @@
 |---|---|
 | Falha ao descarregar fontes (`Failed to fetch 'Inter' from Google Fonts`) | O `next/font/google` precisa de internet **durante o build**. Verificar a rede/proxy. Alternativa: usar fontes locais com `next/font/local` ou o pacote `@fontsource-variable/inter` |
 | Erro de tipos no build | Correr `npm run type-check` e corrigir; o build falha de propósito |
-| Erro de lint no build | Correr `npm run lint`; corrigir ou, com justificação, desactivar a regra naquela linha |
+| Erro `Type 'PropsPagina' does not satisfy the constraint 'PageProps'` | No Next.js 15 e 16, `params` das rotas dinâmicas é uma `Promise`: declarar `params: Promise<{ slug: string }>` e usar `await params` |
+| Erro de lint | Correr `npm run lint` (o build do Next.js 16 não o faz); corrigir ou, com justificação, desactivar a regra naquela linha |
 | `useState` / `useEffect` em Server Component | Acrescentar `"use client"` no topo do ficheiro |
 | `Image ... missing "width" and "height"` | Usar `fill` num contentor com posição relativa e dimensões, ou indicar `width` e `height` |
 
@@ -59,7 +60,7 @@
 | O build passa localmente e falha na Vercel | Comparar versões do Node; confirmar variáveis de ambiente no painel; maiúsculas/minúsculas em nomes de ficheiros |
 | Alterei variáveis mas nada mudou | `NEXT_PUBLIC_*` são fixadas no build: refazer o deploy |
 | Domínio não resolve | Esperar propagação do DNS (até 48 h) e verificar os registos |
-| O build falha com "React Hook ... is called in function ... that is neither a React function component nor a custom React Hook" | O nome do hook não começa por `use`. Renomear (ex.: `useNoEcra`); ver [17](17-convencoes-de-codigo.md) |
+| O lint falha com "React Hook ... is called in function ... that is neither a React function component nor a custom React Hook" | O nome do hook não começa por `use`. Renomear (ex.: `useNoEcra`); ver [17](17-convencoes-de-codigo.md) |
 | O build falha com "Failed to fetch `Inter` from Google Fonts" | O ambiente de build não tem acesso a fonts.googleapis.com (rede restrita, Docker sem internet). Garantir acesso à internet durante o build |
 | O sitemap e os canónicos mostram `vercel.app` ou o domínio errado | Definir `NEXT_PUBLIC_URL_SITE` com o domínio final e refazer o deploy (ver [05](05-variaveis-de-ambiente.md)) |
 | Pré-visualizações (`*.vercel.app`) aparecem no Google | A Vercel já envia `noindex` nas pré-visualizações; confirmar que o domínio de produção é o único indexado |

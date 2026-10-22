@@ -2,7 +2,7 @@
 
 ## Requisitos
 
-- **Node.js 22** (versão fixada em `.nvmrc` e em `engines` no `package.json`; é a que a Vercel e o CI usam). Localmente, o Next.js 14 funciona a partir do Node 18.17, mas versões diferentes da 22 mostram um aviso do npm (`EBADENGINE`), sem impedir a instalação.
+- **Node.js 22** (versão fixada em `.nvmrc` e em `engines` no `package.json`; é a que a Vercel e o CI usam). O Next.js 16 exige no mínimo o Node 20.9; versões diferentes da 22 mostram um aviso do npm (`EBADENGINE`), sem impedir a instalação.
 - **npm** (vem com o Node.js).
 - Ligação à internet na instalação e no primeiro `build` (as fontes são descarregadas do Google Fonts durante o build pelo `next/font`).
 - Git (opcional, para controlo de versões).
@@ -41,10 +41,10 @@ Isto instala as dependências listadas em `package.json` nas versões fixas do `
 | Comando | O que faz |
 |---|---|
 | `npm run dev` | Servidor de desenvolvimento em `http://localhost:3000`, com recarregamento automático. |
-| `npm run build` | Compila a versão de produção (também valida tipos e lint). |
+| `npm run build` | Compila a versão de produção (valida os tipos; desde o Next.js 16 **já não corre o lint**, por isso correr também `npm run lint`). |
 | `npm run start` | Serve a versão de produção compilada (requer `build` antes). |
-| `npm run lint` | Executa o ESLint. |
-| `npm run type-check` | Verifica os tipos TypeScript sem gerar ficheiros. |
+| `npm run lint` | Executa o ESLint 9 (`eslint .`, configuração em `eslint.config.mjs`). |
+| `npm run type-check` | Gera os tipos de rotas do Next.js (`next typegen`) e verifica os tipos TypeScript sem gerar ficheiros. |
 
 ## Primeira execução
 

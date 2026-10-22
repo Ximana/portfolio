@@ -49,9 +49,9 @@ portfolio ximana/
 │                                rotularTipoEtapa
 ├── .dockerignore / Dockerfile   Imagem Docker de produção (modo standalone)
 ├── .env.example                 Modelo de variáveis de ambiente
-├── .eslintrc.json               Configuração do ESLint
 ├── .nvmrc                       Versão do Node (22)
 ├── netlify.toml                 Configuração para o Netlify (alternativa)
+├── eslint.config.mjs            Configuração do ESLint 9 (formato flat)
 ├── next.config.mjs              Configuração do Next.js (imagens, cabeçalhos, URL, standalone)
 ├── vercel.json                  Configuração para a Vercel
 ├── package.json / package-lock.json

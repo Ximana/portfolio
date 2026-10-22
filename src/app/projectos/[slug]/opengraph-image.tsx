@@ -9,8 +9,13 @@ export function generateStaticParams() {
   return projectos.map((projecto) => ({ slug: projecto.slug }));
 }
 
-export default function ImagemSocialProjecto({ params }: { params: { slug: string } }) {
-  const projecto = projectos.find((item) => item.slug === params.slug);
+export default async function ImagemSocialProjecto({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const projecto = projectos.find((item) => item.slug === slug);
 
   return criarImagemSocial({
     etiqueta: "Projecto",

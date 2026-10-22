@@ -35,7 +35,7 @@ Todas as `NEXT_PUBLIC_*` ficam visíveis no navegador. **Não guardar segredos n
 
 - Manter `package-lock.json` versionado, para builds reprodutíveis.
 - Correr `npm audit` de tempos a tempos e actualizar com cuidado (ver [18](18-qualidade-e-testes.md)).
-- O projecto está na última versão da linha 14 do Next.js (14.2.35). O `npm audit` ainda lista avisos do Next.js e do PostCSS que só têm correcção nas versões 15 e 16 (alteração de versão maior). Quase todos dizem respeito a funcionalidades que este site não usa (Server Actions, middleware, `rewrites`, domínios remotos de imagens, servidores personalizados). Mesmo assim, planear a migração para uma versão suportada do Next.js (ver [20](20-roteiro-e-melhorias.md)).
+- O projecto usa Next.js 16.4.2 e React 19. `npm audit --omit=dev` (dependências de produção) dá **0 vulnerabilidades**. Restam avisos apenas em ferramentas de desenvolvimento do Tailwind 3 (`braces`, `postcss-selector-parser`): `braces` não tem versão corrigida e a outra só se resolve passando ao Tailwind 4 (alteração maior); processam apenas ficheiros do próprio projecto e não vão para o site publicado.
 - Actualizações de segurança do Next.js devem ser aplicadas assim que saírem.
 - Instalar apenas pacotes necessários; cada dependência nova aumenta o risco.
 

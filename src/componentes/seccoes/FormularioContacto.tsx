@@ -28,6 +28,8 @@ export function FormularioContacto() {
   useEffect(() => {
     const assunto = new URLSearchParams(window.location.search).get("assunto");
     if (assunto) {
+      // Lê a URL só no navegador (evita diferenças de hidratação).
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       definirMensagem(`Olá Paulo, gostaria de falar consigo sobre ${assunto.slice(0, 80)}.\n\n`);
     }
   }, []);

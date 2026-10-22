@@ -10,7 +10,7 @@ O projecto **não tem testes automáticos**. A qualidade assenta em tipagem estr
 |---|---|
 | `npm run type-check` | Tipos TypeScript em modo `strict` (`tsc --noEmit`) |
 | `npm run lint` | Regras `next/core-web-vitals` (React, hooks, acessibilidade básica, imagens, links) |
-| `npm run build` | Compilação de produção; falha se houver erros de tipos ou de lint |
+| `npm run build` | Compilação de produção; falha se houver erros de tipos (o lint já não corre no build desde o Next.js 16: usar `npm run lint`) |
 
 ## Lista de verificação manual (antes de publicar)
 
@@ -43,7 +43,7 @@ O projecto **não tem testes automáticos**. A qualidade assenta em tipagem estr
 
 - `npm audit` mensal; avaliar cada alerta (muitos afectam só as ferramentas de desenvolvimento).
 - `npm outdated` para ver actualizações. Actualizar uma de cada vez, com `build` e verificação manual entre elas.
-- Manter o Next.js na série 14.x, a menos que se planeie uma migração (a 15 traz mudanças de API, por exemplo em `params` assíncronos).
+- Antes de subir de versão maior do Next.js, ler o guia de migração oficial. Na migração para o 16 foi preciso: `params` assíncrono nas rotas dinâmicas, ESLint 9 com `eslint.config.mjs` e `next typegen` no `type-check`.
 
 ## Se o site crescer: testes recomendados
 

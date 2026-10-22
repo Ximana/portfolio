@@ -15,12 +15,12 @@ Site pessoal e portfólio de **Paulo Ximana**, licenciado em Ciências da Comput
 
 | Área | Tecnologia | Versão |
 |---|---|---|
-| Framework | Next.js (App Router) | 14.2.5 |
-| UI | React | 18.3.1 |
+| Framework | Next.js (App Router, Turbopack) | 16.4.2 |
+| UI | React | 19.1.10 |
 | Linguagem | TypeScript (modo `strict`) | 5.5.3 |
 | Estilos | Tailwind CSS | 3.4.6 |
-| Pós-processamento CSS | PostCSS + Autoprefixer | 8.4.39 / 10.4.19 |
-| Lint | ESLint com `next/core-web-vitals` | 8.57.0 |
+| Pós-processamento CSS | PostCSS + Autoprefixer | 8.5.31 / 10.4.19 |
+| Lint | ESLint (formato flat, `eslint-config-next/core-web-vitals`) | 9.39.5 |
 | Fontes | Inter e JetBrains Mono via `next/font/google` | n/a |
 
 Não há base de dados, nem servidor próprio, nem API própria. O formulário de contacto usa o serviço externo Formspree.

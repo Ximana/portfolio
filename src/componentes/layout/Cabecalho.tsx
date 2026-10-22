@@ -26,6 +26,8 @@ export function Cabecalho() {
 
   // Fecha o menu móvel ao mudar de página ou ao carregar em Escape.
   useEffect(() => {
+    // Reacção a uma mudança de rota (sistema externo ao estado do componente).
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     definirMenuAberto(false);
   }, [caminho]);
 

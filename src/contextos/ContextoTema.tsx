@@ -23,6 +23,8 @@ export function FornecedorTema({ children }: { children: ReactNode }) {
 
   // Sincroniza com o que o script inicial já aplicou ao <html>.
   useEffect(() => {
+    // Lê o DOM só no navegador (evita diferenças de hidratação e o "flash" de tema).
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     definirTema(document.documentElement.classList.contains("dark") ? "escuro" : "claro");
   }, []);
 

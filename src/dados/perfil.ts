@@ -35,8 +35,8 @@ export const perfil: Perfil = {
   ],
   email: "pauloximana@gmail.com",
   redesSociais: [
-    { nome: "GitHub", url: "https://github.com/pauloximana", identificador: "@pauloximana" },
-    { nome: "LinkedIn", url: "https://linkedin.com/in/pauloximana", identificador: "Paulo Ximana" },
+    { nome: "GitHub", url: "https://github.com/Ximana", identificador: "@ximana" },
+    { nome: "LinkedIn", url: "https://linkedin.com/in/paulo-ximana", identificador: "Paulo Ximana" },
   ],
   disponibilidade: "Aberto a colaborações e oportunidades freelance",
   numeros: [

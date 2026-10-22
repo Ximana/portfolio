@@ -12,7 +12,8 @@ import { LigacaoBotao } from "@/componentes/ui/Botao";
 import { obterInfoEstado } from "@/utilitarios/rotularEstado";
 
 interface PropsPagina {
-  params: { slug: string };
+  // No Next.js 15 e 16, `params` é uma Promise e tem de ser aguardado com `await`.
+  params: Promise<{ slug: string }>;
 }
 
 export function generateStaticParams() {
@@ -23,8 +24,9 @@ function obterProjecto(slug: string) {
   return projectos.find((projecto) => projecto.slug === slug);
 }
 
-export function generateMetadata({ params }: PropsPagina): Metadata {
-  const projecto = obterProjecto(params.slug);
+export async function generateMetadata({ params }: PropsPagina): Promise<Metadata> {
+  const { slug } = await params;
+  const projecto = obterProjecto(slug);
   if (!projecto) return {};
   return criarMetadata({
     titulo: `${projecto.nome}: ${projecto.tecnologias.slice(0, 3).join(", ")}`,
@@ -35,8 +37,9 @@ export function generateMetadata({ params }: PropsPagina): Metadata {
   });
 }
 
-export default function PaginaProjecto({ params }: PropsPagina) {
-  const indiceActual = projectos.findIndex((projecto) => projecto.slug === params.slug);
+export default async function PaginaProjecto({ params }: PropsPagina) {
+  const { slug } = await params;
+  const indiceActual = projectos.findIndex((projecto) => projecto.slug === slug);
   const projecto = projectos[indiceActual];
 
   if (!projecto) {

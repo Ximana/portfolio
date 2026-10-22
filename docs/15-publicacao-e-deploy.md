@@ -14,7 +14,7 @@ Em todos, o site é 100% estático no build (27 páginas, incluindo as imagens d
 
 ## Antes de publicar (lista de verificação)
 
-- [ ] `npm run type-check`, `npm run lint` e `npm run build` sem erros (ou `npm ci` seguido dos três, como faz o CI).
+- [ ] `npm run type-check`, `npm run lint` e `npm run build` sem erros (o build do Next.js 16 não corre o lint) (ou `npm ci` seguido dos três, como faz o CI).
 - [ ] `npm run verificar-conteudo` revisto (imagens reais, email, GitHub e LinkedIn reais, CV).
 - [ ] Textos revistos (perfil, projectos, competências, percurso).
 - [ ] Conta no Formspree criada e `NEXT_PUBLIC_FORMSPREE_ID` à mão.
@@ -93,7 +93,7 @@ Sem Docker: `BUILD_STANDALONE=true npm run build` e, depois, copiar `public` e `
 Notas:
 
 - O build descarrega as fontes do Google Fonts: o servidor/contentor de build precisa de internet.
-- Para a optimização de imagens em produção auto-alojada, o Next.js 14 recomenda o pacote `sharp` (`npm install sharp`); sem ele usa uma alternativa mais lenta, mas funcional.
+- Para a optimização de imagens em produção auto-alojada, o Next.js recomenda o pacote `sharp` (`npm install sharp`); sem ele usa uma alternativa mais lenta, mas funcional.
 - O `HSTS` só deve ser enviado quando o HTTPS estiver activo (o proxy trata disso).
 
 ## Integração contínua (GitHub Actions)
