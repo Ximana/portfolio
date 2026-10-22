@@ -127,7 +127,7 @@ function Contato() {
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">{info.titulo}</h3>
-                        {info.link ? (
+                          {info.link ? (
                           <a
                             href={info.link}
                             className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400"
