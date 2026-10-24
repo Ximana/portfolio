@@ -29,6 +29,14 @@ const configuracaoNext = {
     // Adicionar aqui os domínios remotos usados para imagens (ex.: CDN de projectos)
     remotePatterns: [],
   },
+  async redirects() {
+    return [
+      // O projecto "Zero Barreiras" passou a chamar-se Okuyeva (o nome anterior era o do hackathon).
+      { source: "/projectos/zero-barreiras", destination: "/projectos/okuyeva", permanent: true },
+      // Projecto removido do portfólio.
+      { source: "/projectos/recruta-app", destination: "/projectos", permanent: true },
+    ];
+  },
   async headers() {
     return [
       {

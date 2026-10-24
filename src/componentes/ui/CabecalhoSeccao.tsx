@@ -1,8 +1,6 @@
 import type { ReactNode } from "react";
 
 interface PropsCabecalhoSeccao {
-  /** Número da secção, ex.: "01". */
-  indice?: string;
   etiqueta: string;
   titulo: string;
   descricao?: string;
@@ -13,7 +11,6 @@ interface PropsCabecalhoSeccao {
 }
 
 export function CabecalhoSeccao({
-  indice,
   etiqueta,
   titulo,
   descricao,
@@ -25,10 +22,7 @@ export function CabecalhoSeccao({
   return (
     <header className="mb-12 flex flex-col gap-6 md:mb-14 md:flex-row md:items-end md:justify-between">
       <div className="max-w-2xl">
-        <p className="etiqueta-mono">
-          {indice && <span className="text-esbatido">{indice} / </span>}
-          {etiqueta}
-        </p>
+        <p className="etiqueta-mono">{etiqueta}</p>
         <Titulo
           className={
             nivel === "h1"

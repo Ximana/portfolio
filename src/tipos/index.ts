@@ -33,6 +33,63 @@ export interface NumeroDestaque {
 
 export type EstadoProjecto = "em-desenvolvimento" | "concluido" | "pausado";
 
+/** Grupo temático de funcionalidades (ex.: "Gamificação", "Comunidade"). */
+export interface GrupoFuncionalidades {
+  titulo: string;
+  itens: string[];
+}
+
+/** Tabela de dados de um projecto (métricas, análises...). */
+export interface TabelaProjecto {
+  titulo: string;
+  colunas: string[];
+  linhas: string[][];
+}
+
+/** Valor numérico de um gráfico. `texto` substitui a formatação automática (ex.: "~31 mil"). */
+export interface DadoGrafico {
+  rotulo: string;
+  valor: number;
+  texto?: string;
+}
+
+/**
+ * Gráfico de um projecto, desenhado em HTML/SVG (sem bibliotecas).
+ * - "barras": barras horizontais, uma por dado (usa `dados`).
+ * - "agrupadas": várias séries por grupo (usa `series` e `grupos`).
+ * - "donut": proporções de um todo, com valor ao centro (usa `dados` e `centro`).
+ * - "empilhada": uma só barra dividida em partes (usa `dados`).
+ * Só com valores reais e verificáveis.
+ */
+export interface GraficoProjecto {
+  tipo: "barras" | "agrupadas" | "donut" | "empilhada";
+  titulo: string;
+  /** Legenda curta por baixo do gráfico (fonte, unidade, ressalvas). */
+  nota?: string;
+  /** Unidade acrescentada aos valores (ex.: "%", "km/h"). */
+  unidade?: string;
+  /** Valor que corresponde a 100 % da largura das barras. Por omissão, o maior valor. */
+  maximo?: number;
+  dados?: DadoGrafico[];
+  series?: string[];
+  grupos?: { rotulo: string; valores: number[] }[];
+  centro?: NumeroDestaque;
+}
+
+/** Sequência de passos (fluxo de dados, pipeline, níveis de progressão...). */
+export interface FluxoProjecto {
+  titulo: string;
+  passos: { rotulo: string; detalhe?: string }[];
+}
+
+/** Logótipo do projecto (ficheiro public/imagens/logotipos/<slug>.png). */
+export interface LogotipoProjecto {
+  largura: number;
+  altura: number;
+  /** "escuro" para logótipos brancos, que precisam de fundo escuro para se verem. */
+  fundo?: "claro" | "escuro";
+}
+
 export interface Projecto {
   slug: string;
   nome: string;
@@ -42,6 +99,7 @@ export interface Projecto {
   tecnologias: string[];
   estado: EstadoProjecto;
   destaque: boolean;
+  logotipo?: LogotipoProjecto;
   url?: string;
   urlCodigo?: string;
   /** Campos do estudo de caso. Todos opcionais: só aparecem se preenchidos. */
@@ -52,6 +110,30 @@ export interface Projecto {
   desafios?: string[];
   /** Resultados mensuráveis (utilizadores, precisão, tempo poupado...). Só com dados reais. */
   resultados?: NumeroDestaque[];
+  /** Factos de dimensão do projecto (linhas de código, ecrãs, módulos...). Só valores verificáveis. */
+  numeros?: NumeroDestaque[];
+  /** Problemas que o projecto resolve. */
+  problema?: string[];
+  /** Funcionalidades agrupadas por tema. Quando existe, substitui `funcionalidades` na página. */
+  gruposFuncionalidades?: GrupoFuncionalidades[];
+  /** Fluxos visuais (arquitectura, pipeline, níveis...). */
+  fluxos?: FluxoProjecto[];
+  /** Evolução prevista do projecto. */
+  proximosPassos?: string[];
+  /** Aviso de uso responsável, mostrado em destaque no topo do estudo de caso. */
+  aviso?: string;
+  /** Notas curtas junto dos gráficos e tabelas. */
+  notasResultados?: string[];
+  /** Gráficos de dados. */
+  graficos?: GraficoProjecto[];
+  /** Tabelas de dados. */
+  tabelas?: TabelaProjecto[];
+  /** Contexto do projecto (ex.: hackathon, promotor, resultado), como pares rótulo/valor. */
+  contexto?: { titulo: string; itens: { rotulo: string; valor: string }[] };
+  /** Descrição de como o projecto foi demonstrado. */
+  demonstracao?: string;
+  /** Limitações conhecidas do projecto (honestidade sobre o alcance). */
+  limitacoes?: string[];
 }
 
 export interface Reconhecimento {

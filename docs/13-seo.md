@@ -68,7 +68,7 @@ criarMetadata({
 
 Com `npm run build && npm run start`:
 
-- `/sitemap.xml`: lista as 8 URLs (4 páginas e 4 projectos).
+- `/sitemap.xml`: lista as 10 URLs (4 páginas e 6 projectos).
 - `/robots.txt`: inclui a linha `Sitemap:`.
 - Ver o código-fonte de uma página: procurar `<link rel="canonical">`, `og:title`, `og:image` e `application/ld+json`.
 - `/opengraph-image` e `/projectos/pulmovision/opengraph-image`: devolvem PNG.

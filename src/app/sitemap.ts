@@ -6,7 +6,7 @@ import { urlAbsoluta } from "@/utilitarios/seo";
  * Data da última alteração de conteúdo. Actualizar quando o conteúdo mudar:
  * datas "sempre novas" levam o Google a desconfiar do campo lastModified.
  */
-const ultimaActualizacao = new Date("2026-10-15");
+const ultimaActualizacao = new Date("2026-10-23");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const paginas: MetadataRoute.Sitemap = [

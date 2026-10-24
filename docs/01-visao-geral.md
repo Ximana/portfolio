@@ -2,7 +2,7 @@
 
 ## O que é
 
-Site pessoal e portfólio de **Paulo Ximana**, licenciado em Ciências da Computação e desenvolvedor full-stack em Luanda, Angola, fundador da QUANTA. O site apresenta o perfil profissional, os projectos (PulmoVision, QUANTA Learn, Zero Barreiras, RecrutaApp), as competências técnicas e um formulário de contacto.
+Site pessoal e portfólio de **Paulo Ximana**, licenciado em Ciências da Computação e desenvolvedor full-stack em Luanda, Angola, fundador da QUANTA. O site apresenta o perfil profissional, os projectos (PulmoVision, QUANTA Learn, MediNova, RZN App, Okuyeva, Saúde Pública com Hadoop), as competências técnicas e um formulário de contacto.
 
 ## Objectivos
 

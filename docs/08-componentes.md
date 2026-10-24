@@ -18,7 +18,7 @@ Todos os componentes estão em `src/componentes/`, organizados por função. Pro
 | `Heroi` | Apresentação inicial: etiqueta de localidade, nome (`h1`), cargo, frase, botões, redes, ligação ao currículo, cartão de código e os factos de `perfil.numeros`. Inclui o fundo em `.hero-fundo`. |
 | `CartaoCodigo` | Perfil apresentado como objecto TypeScript. Decorativo (`aria-hidden`). Conteúdo fixo no ficheiro. |
 | `SobreMim` | Texto curto e lista de factos. |
-| `Projectos` | Projectos em destaque (1 grande e os restantes em duas colunas). |
+| `Projectos` | Projectos em destaque (1 grande e os restantes em duas colunas; se o número de restantes for ímpar, o último ocupa a largura toda). |
 | `Competencias` | Grelha "bento" de áreas e tecnologias. |
 | `Contacto` | Painel final com chamada à acção. |
 | `PercursoAcademico` | Linha temporal vertical com `percurso.ts`. |

@@ -1,12 +1,17 @@
-Cada ficheiro .jpg nesta pasta é um placeholder gerado automaticamente
-(1200×675px, proporção 16:9), usado nos cartões de projecto e na página de
-detalhe. Substitui cada um por uma captura de ecrã real do respectivo
-projecto, mantendo o mesmo nome de ficheiro:
+Imagens dos projectos (1200x675px, proporção 16:9), usadas nos cartões de
+projecto e na página de detalhe. O nome do ficheiro é sempre "<slug>.jpg".
 
+Já com o logótipo do projecto (composição sobre fundo da marca):
 - pulmovision.jpg
-- quanta-learn.jpg
-- zero-barreiras.jpg
-- recruta-app.jpg
+- quanta-learn.jpg  (o logótipo original tem baixa resolução; se tiveres uma
+                     versão maior, volta a gerar a imagem)
+- rzn-app.jpg
+- musa.jpg
+
+Ainda placeholders automáticos (substitui por capturas de ecrã reais):
+- medinova.jpg
+- okuyeva.jpg
+- hadoop-saude-angola.jpg
 
 Se adicionares um projecto novo em src/dados/projectos.ts, cria também aqui
 uma imagem com o nome "<slug-do-projecto>.jpg".

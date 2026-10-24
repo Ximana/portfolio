@@ -44,7 +44,7 @@ Lista `projectos` de objectos `Projecto`.
 
 ### Adicionar um projecto
 
-1. Acrescentar um objecto à lista em `projectos.ts`.
+1. Acrescentar um objecto à lista em `projectos.ts`. Para projectos com muito conteúdo (estudo de caso completo), criar antes um ficheiro em `src/dados/detalhes/<slug>.ts` que exporta o objecto `Projecto` e importá-lo na lista (como já é feito com `quanta-learn.ts` e `rzn-app.ts`).
 2. Criar a imagem `public/imagens/projectos/<slug>.jpg` (1200x675).
 3. Pronto: o projecto aparece na lista, tem página própria, entra no sitemap e ganha imagem de partilha automática.
 
@@ -92,6 +92,21 @@ Alguns textos são escritos directamente nos componentes e precisam de edição 
 
 - `perfil.numeros`: factos mostrados no herói (usar apenas factos verificáveis, não números de vaidade). `perfil.cv`: ficheiro do currículo.
 - `projectos.ts`, campos opcionais: `objectivo`, `solucao`, `funcionalidades[]`, `decisoesTecnicas[]`, `desafios[]`, `resultados[]` (`{ valor, rotulo }`, só com dados reais).
+- Campos opcionais adicionais para estudos de caso mais completos (renderizados por `EstudoDeCaso.tsx`):
+  - `problema[]`: problemas que o projecto resolve.
+  - `gruposFuncionalidades[]`: `{ titulo, itens[] }`; quando existe, substitui `funcionalidades` na página.
+  - `numeros[]`: `{ valor, rotulo }` com a dimensão do projecto (linhas de código, ecrãs, módulos). Só valores verificáveis.
+  - `fluxos[]`: `{ titulo, passos: [{ rotulo, detalhe? }] }`, sequências visuais (arquitectura, pipeline, níveis). Até 5 passos aparecem com setas; com mais, como cartões numerados.
+  - `graficos[]`: gráficos em HTML/SVG, sem bibliotecas. Campo `tipo`: `"barras"` (usa `dados`), `"agrupadas"` (usa `series` e `grupos`), `"donut"` (usa `dados` e `centro`) ou `"empilhada"` (usa `dados`). Opcionais: `unidade`, `maximo`, `nota`. `DadoGrafico.texto` substitui a formatação do valor (ex.: `"~31 mil"`). Só com valores reais.
+  - `proximosPassos[]`: evolução prevista.
+  - `aviso`: nota de uso responsável, em destaque (ex.: ferramenta de apoio que não substitui o diagnóstico).
+  - `notasResultados[]`: texto de apoio aos resultados.
+  - `tabelas[]`: `{ titulo, colunas[], linhas[][] }`.
+  - `limitacoes[]`: limitações conhecidas.
+  - `contexto`: `{ titulo, itens: [{ rotulo, valor }] }`, ex.: ficha de um hackathon (evento, promotor, resultado).
+  - `demonstracao`: texto sobre como o projecto foi demonstrado.
+- Ordem fixa do estudo de caso: aviso e contexto, resultados e números, visão geral (problema, objectivo, solução), dados e análise (gráficos, tabelas, notas), como funciona (fluxos), funcionalidades, demonstração, decisões técnicas, desafios e limitações, próximos passos. Regra de ouro: mostrar só o necessário (cerca de 3 a 5 itens por lista) e preferir um gráfico, uma tabela ou um fluxo a um parágrafo de números.
+- `detalhes/`: pasta `src/dados/detalhes/` com um ficheiro por projecto detalhado (`pulmovision.ts`, `quanta-learn.ts`, `rzn-app.ts`, `hadoop-saude-angola.ts`, `okuyeva.ts`, `medinova.ts`, `musa.ts`). Os restantes projectos continuam em `projectos.ts` e podem ser movidos para lá quando ganharem mais conteúdo.
 - `reconhecimentos.ts`: `{ titulo, descricao, projecto? }`.
 - `testemunhos.ts`: `{ texto, autor, funcao, organizacao? }`. Vazio por omissão: a secção não aparece até haver um testemunho real autorizado.
 - `npm run verificar-conteudo` lista o que falta preencher ou substituir antes de publicar.

@@ -13,7 +13,7 @@ const factos = [
 export function SobreMim() {
   return (
     <section className="contentor py-16 md:py-24" id="sobre">
-      <CabecalhoSeccao indice="01" etiqueta="Sobre" titulo="Engenharia de software com inteligência artificial aplicada." />
+      <CabecalhoSeccao etiqueta="Sobre" titulo="Engenharia de software com inteligência artificial aplicada." />
 
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:gap-20">
         <div>

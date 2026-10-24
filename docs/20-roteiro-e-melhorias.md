@@ -7,7 +7,7 @@ Executar `npm run verificar-conteudo` para a lista actual. A estrutura (estudo d
 | Item | Onde | Prioridade |
 |---|---|---|
 | Fotografia de perfil real (800x800) | `public/imagens/perfil/perfil.jpg` | Alta |
-| Capturas de ecrã reais dos 4 projectos (1200x675) | `public/imagens/projectos/` | Alta |
+| Capturas de ecrã reais dos 6 projectos (1200x675) | `public/imagens/projectos/` | Alta |
 | Confirmar email, GitHub e LinkedIn | `src/dados/perfil.ts` | Alta |
 | Domínio real | `NEXT_PUBLIC_URL_SITE` | Alta |
 | Activar o formulário (Formspree) | `NEXT_PUBLIC_FORMSPREE_ID` | Alta |

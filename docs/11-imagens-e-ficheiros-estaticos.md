@@ -9,8 +9,10 @@ Tudo o que está em `public/` é servido na raiz do site (`public/imagens/perfil
 | `public/imagens/perfil/perfil.jpg` | 800x800 (quadrada) | Página Sobre, JSON-LD (`Person.image`) | **Placeholder** |
 | `public/imagens/projectos/pulmovision.jpg` | 1200x675 (16:9) | Cartão e detalhe | **Placeholder** |
 | `public/imagens/projectos/quanta-learn.jpg` | 1200x675 | Cartão e detalhe | **Placeholder** |
-| `public/imagens/projectos/zero-barreiras.jpg` | 1200x675 | Cartão e detalhe | **Placeholder** |
-| `public/imagens/projectos/recruta-app.jpg` | 1200x675 | Cartão e detalhe | **Placeholder** |
+| `public/imagens/projectos/hadoop-saude-angola.jpg` | 1200x675 | Cartão e detalhe | **Placeholder** |
+| `public/imagens/projectos/medinova.jpg` | 1200x675 | Cartão e detalhe | **Placeholder** |
+| `public/imagens/projectos/rzn-app.jpg` | 1200x675 | Cartão e detalhe | **Placeholder** |
+| `public/imagens/projectos/okuyeva.jpg` | 1200x675 | Cartão e detalhe | **Placeholder** |
 | `public/imagens/hero/fundo-hero.svg` | vectorial (1600x900) | Fundo do hero | Definitivo |
 | `public/imagens/logotipos/` | livre | Logótipos de projectos ou parceiros | Vazia |
 | `public/ficheiros/` | n/a | CV e documentos descarregáveis | Vazia |

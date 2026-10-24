@@ -9,7 +9,7 @@ const classesBase =
   "group inline-flex items-center justify-center gap-2 rounded-lg font-medium whitespace-nowrap transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-60";
 
 const classesPorVariante: Record<VarianteBotao, string> = {
-  primario: "bg-jade text-fundo shadow-brilho hover:bg-jade-escuro hover:-translate-y-px",
+  primario: "bg-jade text-fundo hover:bg-jade-escuro hover:-translate-y-px",
   secundario:
     "border border-linha bg-superficie/70 text-marfim hover:border-esbatido/50 hover:bg-superficie",
   texto: "text-esbatido hover:text-marfim",

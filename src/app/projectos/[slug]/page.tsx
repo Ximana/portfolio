@@ -87,6 +87,21 @@ export default async function PaginaProjecto({ params }: PropsPagina) {
           <span className={`h-1.5 w-1.5 rounded-full ${infoEstado.corPonto}`} />
           {infoEstado.rotulo}
         </div>
+        {projecto.logotipo && (
+          <div
+            className={`mt-6 inline-flex rounded-xl border border-linha px-5 py-3 ${
+              projecto.logotipo.fundo === "escuro" ? "bg-[#162036]" : "bg-white"
+            }`}
+          >
+            <Image
+              src={`/imagens/logotipos/${projecto.slug}.png`}
+              alt={`Logótipo de ${projecto.nome}`}
+              width={projecto.logotipo.largura}
+              height={projecto.logotipo.altura}
+              className="h-9 w-auto md:h-11"
+            />
+          </div>
+        )}
         <h1 className="mt-4 text-4xl font-semibold md:text-6xl">{projecto.nome}</h1>
         <p className="mt-5 text-xl leading-8 text-esbatido">{projecto.resumo}</p>
       </header>
@@ -103,12 +118,14 @@ export default async function PaginaProjecto({ params }: PropsPagina) {
       </div>
 
       <div className="mt-14 grid gap-12 lg:grid-cols-[1fr_300px] lg:gap-16">
-        <div className="min-w-0 max-w-conteudo space-y-6">
-          {projecto.descricao.map((paragrafo, indice) => (
-            <p key={indice} className={indice === 0 ? "text-lg leading-8 text-marfim/90" : "leading-8 text-esbatido"}>
-              {paragrafo}
-            </p>
-          ))}
+        <div className="min-w-0">
+          <div className="max-w-conteudo space-y-6">
+            {projecto.descricao.map((paragrafo, indice) => (
+              <p key={indice} className={indice === 0 ? "text-lg leading-8 text-marfim/90" : "leading-8 text-esbatido"}>
+                {paragrafo}
+              </p>
+            ))}
+          </div>
           <EstudoDeCaso projecto={projecto} />
         </div>
 

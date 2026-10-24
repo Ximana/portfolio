@@ -80,8 +80,11 @@ Todas as imagens do site, a fotografia de perfil e as capturas de ecrã dos proj
 | `public/imagens/perfil/perfil.jpg` | 800×800px (quadrada) | Página "Sobre" |
 | `public/imagens/projectos/pulmovision.jpg` | 1200×675px (16:9) | Cartão e página de detalhe da PulmoVision |
 | `public/imagens/projectos/quanta-learn.jpg` | 1200×675px (16:9) | Cartão e página de detalhe da QUANTA Learn |
-| `public/imagens/projectos/zero-barreiras.jpg` | 1200×675px (16:9) | Cartão e página de detalhe do Zero Barreiras |
-| `public/imagens/projectos/recruta-app.jpg` | 1200×675px (16:9) | Cartão e página de detalhe do RecrutaApp |
+| `public/imagens/projectos/hadoop-saude-angola.jpg` | 1200×675px (16:9) | Cartão e página de detalhe da análise de saúde com Hadoop |
+| `public/imagens/projectos/medinova.jpg` | 1200×675px (16:9) | Cartão e página de detalhe do MediNova |
+| `public/imagens/projectos/rzn-app.jpg` | 1200×675px (16:9) | Cartão e página de detalhe da RZN App |
+| `public/imagens/projectos/okuyeva.jpg` | 1200×675px (16:9) | Cartão e página de detalhe do Okuyeva |
+| `public/imagens/projectos/musa.jpg` | 1200×675px (16:9) | Cartão e página de detalhe do website da MUSA |
 
 Se adicionares um projecto novo a `src/dados/projectos.ts`, cria também uma imagem `<slug-do-projecto>.jpg` (1200×675px) em `public/imagens/projectos/`, os componentes já vão à procura dela automaticamente pelo `slug`.
 

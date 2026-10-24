@@ -95,7 +95,7 @@ html.dark {
   }
 
   .painel {
-    @apply rounded-2xl border border-linha bg-superficie shadow-cartao;
+    @apply rounded-2xl border border-linha bg-superficie;
   }
 }
 

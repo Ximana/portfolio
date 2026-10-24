@@ -24,6 +24,10 @@ export const perfil: Perfil = {
     "QUANTA",
     "PulmoVision",
     "QUANTA Learn",
+    "RZN App",
+    "MediNova",
+    "sistema de gestão hospitalar",
+    "React Native",
   ],
   instituicao: "Instituto Superior Politécnico Metropolitano de Angola",
   bioResumida:
@@ -31,7 +35,7 @@ export const perfil: Perfil = {
   bioCompleta: [
     "Sou licenciado em Ciências da Computação pelo Instituto Superior Politécnico Metropolitano de Angola (2021 a 2026) e desenvolvedor full-stack. Trabalho principalmente com Next.js, React e Django, e tenho vindo a aprofundar a aplicação prática de inteligência artificial em produtos com utilidade concreta.",
     "Sou fundador da QUANTA, uma startup onde desenvolvo dois projectos principais: a PulmoVision, uma plataforma de deep learning para detecção de doenças pulmonares a partir de radiografias do tórax, e a QUANTA Learn, uma plataforma de aprendizagem de inglês. A PulmoVision é também o tema do meu trabalho de conclusão de curso.",
-    "Para além do trabalho na QUANTA, actuo como desenvolvedor backend e analista de dados em regime freelance, e mantenho-me envolvido noutros projectos, do reconhecimento de Língua de Sinais Angolana à construção de aplicações móveis.",
+    "Para além do trabalho na QUANTA, actuo como desenvolvedor backend e analista de dados em regime freelance, e mantenho-me envolvido noutros projectos, do reconhecimento de Língua Gestual Angolana (Okuyeva, 2.º lugar no Hackathon Zero Barreiras) à gestão hospitalar (MediNova) e à construção de aplicações móveis, como a RZN App, uma aplicação de desporto e comunidade em React Native.",
   ],
   email: "pauloximana@gmail.com",
   redesSociais: [

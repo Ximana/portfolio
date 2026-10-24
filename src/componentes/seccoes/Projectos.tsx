@@ -11,10 +11,9 @@ export function Projectos() {
   return (
     <section className="contentor py-16 md:py-24" id="projectos">
       <CabecalhoSeccao
-        indice="02"
         etiqueta="Projectos"
         titulo="Trabalho seleccionado"
-        descricao="Produtos reais, da saúde à educação, construídos de ponta a ponta."
+        descricao="Produtos reais, da saúde à educação e ao desporto, construídos de ponta a ponta."
         accao={
           <LigacaoBotao href="/projectos" variante="secundario" tamanho="sm">
             Ver todos
@@ -28,11 +27,23 @@ export function Projectos() {
             <CartaoProjecto projecto={principal} variante="destaque" />
           </RevelarAoRolar>
         )}
-        {restantes.map((projecto, indice) => (
-          <RevelarAoRolar key={projecto.slug} atraso={indice * 80} className="h-full">
-            <CartaoProjecto projecto={projecto} limiteTecnologias={3} />
-          </RevelarAoRolar>
-        ))}
+        {restantes.map((projecto, indice) => {
+          // Se o número de cartões for ímpar, o último ocupa a largura toda para não deixar um vazio.
+          const ultimoSozinho = restantes.length % 2 === 1 && indice === restantes.length - 1;
+          return (
+            <RevelarAoRolar
+              key={projecto.slug}
+              atraso={indice * 80}
+              className={ultimoSozinho ? "h-full md:col-span-2" : "h-full"}
+            >
+              <CartaoProjecto
+                projecto={projecto}
+                variante={ultimoSozinho ? "destaque" : "padrao"}
+                limiteTecnologias={ultimoSozinho ? 5 : 3}
+              />
+            </RevelarAoRolar>
+          );
+        })}
       </div>
     </section>
   );

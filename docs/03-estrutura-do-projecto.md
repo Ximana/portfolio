@@ -75,7 +75,7 @@ import { Botao } from "@/componentes/ui/Botao";
 | Tarefa | Ficheiro |
 |---|---|
 | Alterar textos do perfil | `src/dados/perfil.ts` |
-| Adicionar um projecto | `src/dados/projectos.ts` + imagem em `public/imagens/projectos/` |
+| Adicionar um projecto | `src/dados/projectos.ts` (ou um ficheiro em `src/dados/detalhes/`) + imagem em `public/imagens/projectos/` |
 | Alterar cores | `src/app/globals.css` |
 | Alterar fontes | `src/estilos/tipografia.ts` |
 | Alterar a navegação | `src/componentes/layout/Cabecalho.tsx` e `Rodape.tsx` |

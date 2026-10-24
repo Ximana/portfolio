@@ -8,7 +8,7 @@ import { CabecalhoSeccao } from "@/componentes/ui/CabecalhoSeccao";
 export const metadata: Metadata = criarMetadata({
   titulo: "Projectos de software e inteligência artificial",
   descricao:
-    "Projectos de Paulo Ximana: PulmoVision (deep learning na saúde), QUANTA Learn (aprendizagem de inglês), Zero Barreiras e RecrutaApp.",
+    "Projectos de Paulo Ximana: PulmoVision (deep learning na saúde), QUANTA Learn (aprendizagem de inglês), MediNova (gestão hospitalar), RZN App (desporto e comunidade), Okuyeva (tradutor de Língua Gestual Angolana, 2.º lugar no Hackathon Zero Barreiras) e análise de saúde pública com Hadoop.",
   caminho: "/projectos",
 });
 
@@ -43,7 +43,7 @@ export default function PaginaProjectos() {
         nivel="h1"
         etiqueta="Projectos"
         titulo="Uma selecção do que tenho construído"
-        descricao="Entre a QUANTA e trabalho independente: da saúde à educação e à acessibilidade."
+        descricao="Entre a QUANTA e trabalho independente: da saúde à educação, ao desporto e à acessibilidade."
       />
 
       <ListaProjectos projectos={projectos} />

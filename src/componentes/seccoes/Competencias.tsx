@@ -17,7 +17,6 @@ export function Competencias() {
   return (
     <section className="contentor py-16 md:py-24" id="competencias">
       <CabecalhoSeccao
-        indice="03"
         etiqueta="Competências"
         titulo="Tecnologias e áreas de actuação"
         descricao="Das interfaces ao modelo de aprendizagem, o conjunto de ferramentas com que trabalho."
@@ -31,12 +30,7 @@ export function Competencias() {
             className={juntarClasses("h-full", larguraPorPosicao[indice] ?? "lg:col-span-2")}
           >
             <div className="painel h-full p-6 transition-colors duration-300 hover:border-jade/40">
-              <div className="flex items-baseline justify-between">
-                <h3 className="text-lg font-semibold">{grupo.area}</h3>
-                <span className="font-mono text-xs text-esbatido">
-                  {String(indice + 1).padStart(2, "0")}
-                </span>
-              </div>
+              <h3 className="text-lg font-semibold">{grupo.area}</h3>
               <div className="mt-5 flex flex-wrap gap-2">
                 {grupo.itens.map((item) => (
                   <Etiqueta key={item} texto={item} />
