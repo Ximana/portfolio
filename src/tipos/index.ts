@@ -82,14 +82,6 @@ export interface FluxoProjecto {
   passos: { rotulo: string; detalhe?: string }[];
 }
 
-/** Logótipo do projecto (ficheiro public/imagens/logotipos/<slug>.png). */
-export interface LogotipoProjecto {
-  largura: number;
-  altura: number;
-  /** "escuro" para logótipos brancos, que precisam de fundo escuro para se verem. */
-  fundo?: "claro" | "escuro";
-}
-
 export interface Projecto {
   slug: string;
   nome: string;
@@ -99,7 +91,8 @@ export interface Projecto {
   tecnologias: string[];
   estado: EstadoProjecto;
   destaque: boolean;
-  logotipo?: LogotipoProjecto;
+  /** Imagem de capa (em public/). Por omissão: /imagens/projectos/<slug>.jpg. */
+  imagem?: string;
   url?: string;
   urlCodigo?: string;
   /** Campos do estudo de caso. Todos opcionais: só aparecem se preenchidos. */

@@ -42,6 +42,10 @@ Lista `projectos` de objectos `Projecto`.
 | `url` | texto (opcional) | Botão "Ver site" |
 | `urlCodigo` | texto (opcional) | Botão "Ver código" |
 
+### Imagem de capa
+
+- `imagem` (opcional): caminho da capa. Por omissão `/imagens/projectos/<slug>.jpg`. Ao trocar uma imagem, usa um nome novo (ex.: `<slug>-capa-2.jpg`), senão o navegador e o optimizador do Next.js podem continuar a mostrar a antiga.
+
 ### Adicionar um projecto
 
 1. Acrescentar um objecto à lista em `projectos.ts`. Para projectos com muito conteúdo (estudo de caso completo), criar antes um ficheiro em `src/dados/detalhes/<slug>.ts` que exporta o objecto `Projecto` e importá-lo na lista (como já é feito com `quanta-learn.ts` e `rzn-app.ts`).

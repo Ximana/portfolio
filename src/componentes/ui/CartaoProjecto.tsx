@@ -4,6 +4,7 @@ import type { Projecto } from "@/tipos";
 import { IconeSeta } from "@/componentes/icones/Icones";
 import { Cartao } from "@/componentes/ui/Cartao";
 import { Etiqueta } from "@/componentes/ui/Etiqueta";
+import { imagemProjecto } from "@/utilitarios/imagemProjecto";
 import { obterInfoEstado } from "@/utilitarios/rotularEstado";
 import { juntarClasses } from "@/utilitarios/juntarClasses";
 
@@ -43,7 +44,7 @@ export function CartaoProjecto({
           )}
         >
           <Image
-            src={`/imagens/projectos/${projecto.slug}.jpg`}
+            src={imagemProjecto(projecto)}
             alt={`Imagem do projecto ${projecto.nome}`}
             fill
             sizes={eDestaque ? "(min-width: 1024px) 40vw, 100vw" : "(min-width: 768px) 45vw, 100vw"}

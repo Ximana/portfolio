@@ -30,7 +30,7 @@ export const quantaLearn: Projecto = {
     "Jest",
   ],
   estado: "em-desenvolvimento",
-  logotipo: { largura: 1000, altura: 249 },
+  imagem: "/imagens/projectos/quanta-learn-capa.jpg",
   destaque: true,
   url: "https://app.quantalearn.ao",
 

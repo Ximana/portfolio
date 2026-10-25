@@ -16,7 +16,7 @@ export const musa: Projecto = {
   papel: "Desenvolvedor web",
   tecnologias: ["Next.js", "Vercel"],
   estado: "concluido",
-  logotipo: { largura: 1200, altura: 143, fundo: "escuro" },
+  imagem: "/imagens/projectos/musa-capa.jpg",
   destaque: false,
   url: "https://musa-yzaj.vercel.app/",
 

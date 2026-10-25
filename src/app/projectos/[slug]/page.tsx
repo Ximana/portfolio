@@ -9,6 +9,7 @@ import { IconeSeta } from "@/componentes/icones/Icones";
 import { EstudoDeCaso } from "@/componentes/seccoes/EstudoDeCaso";
 import { Etiqueta } from "@/componentes/ui/Etiqueta";
 import { LigacaoBotao } from "@/componentes/ui/Botao";
+import { imagemProjecto } from "@/utilitarios/imagemProjecto";
 import { obterInfoEstado } from "@/utilitarios/rotularEstado";
 
 interface PropsPagina {
@@ -61,7 +62,7 @@ export default async function PaginaProjecto({ params }: PropsPagina) {
             name: projecto.nome,
             description: projecto.descricao[0],
             url: urlAbsoluta(`/projectos/${projecto.slug}`),
-            image: urlAbsoluta(`/imagens/projectos/${projecto.slug}.jpg`),
+            image: urlAbsoluta(imagemProjecto(projecto)),
             inLanguage: "pt-AO",
             keywords: projecto.tecnologias.join(", "),
             creator: { "@id": idPessoa },
@@ -87,28 +88,13 @@ export default async function PaginaProjecto({ params }: PropsPagina) {
           <span className={`h-1.5 w-1.5 rounded-full ${infoEstado.corPonto}`} />
           {infoEstado.rotulo}
         </div>
-        {projecto.logotipo && (
-          <div
-            className={`mt-6 inline-flex rounded-xl border border-linha px-5 py-3 ${
-              projecto.logotipo.fundo === "escuro" ? "bg-[#162036]" : "bg-white"
-            }`}
-          >
-            <Image
-              src={`/imagens/logotipos/${projecto.slug}.png`}
-              alt={`Logótipo de ${projecto.nome}`}
-              width={projecto.logotipo.largura}
-              height={projecto.logotipo.altura}
-              className="h-9 w-auto md:h-11"
-            />
-          </div>
-        )}
         <h1 className="mt-4 text-4xl font-semibold md:text-6xl">{projecto.nome}</h1>
         <p className="mt-5 text-xl leading-8 text-esbatido">{projecto.resumo}</p>
       </header>
 
       <div className="painel relative mt-10 aspect-video w-full overflow-hidden">
         <Image
-          src={`/imagens/projectos/${projecto.slug}.jpg`}
+          src={imagemProjecto(projecto)}
           alt={`Imagem do projecto ${projecto.nome}`}
           fill
           sizes="(min-width: 1152px) 1100px, 100vw"

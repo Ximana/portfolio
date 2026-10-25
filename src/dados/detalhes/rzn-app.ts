@@ -26,7 +26,7 @@ export const rznApp: Projecto = {
     "Jest",
   ],
   estado: "em-desenvolvimento",
-  logotipo: { largura: 1200, altura: 260 },
+  imagem: "/imagens/projectos/rzn-app-capa.jpg",
   destaque: true,
 
   numeros: [

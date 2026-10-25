@@ -28,7 +28,7 @@ export const pulmovision: Projecto = {
     "scikit-learn",
   ],
   estado: "concluido",
-  logotipo: { largura: 712, altura: 118 },
+  imagem: "/imagens/projectos/pulmovision-capa.jpg",
   destaque: true,
 
   aviso:

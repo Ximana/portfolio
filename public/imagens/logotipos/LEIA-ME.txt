@@ -1,6 +1,2 @@
-Logótipos dos projectos, usados no cabeçalho da página de detalhe.
-O ficheiro chama-se "<slug-do-projecto>.png" e é declarado no campo
-"logotipo" do projecto (largura, altura e, se for branco, fundo: "escuro").
-
-Actuais: pulmovision.png, quanta-learn.png, rzn-app.png, musa.png
-(o da QUANTA Learn tem baixa resolução de origem).
+Logótipos originais dos projectos (pulmovision.png, quanta-learn.png, rzn-app.png, musa.png).
+Já estão incluídos nas imagens de capa em public/imagens/projectos/ e não são mostrados à parte nas páginas.

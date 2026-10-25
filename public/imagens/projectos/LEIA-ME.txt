@@ -1,12 +1,13 @@
 Imagens dos projectos (1200x675px, proporção 16:9), usadas nos cartões de
 projecto e na página de detalhe. O nome do ficheiro é sempre "<slug>.jpg".
 
-Já com o logótipo do projecto (composição sobre fundo da marca):
-- pulmovision.jpg
-- quanta-learn.jpg  (o logótipo original tem baixa resolução; se tiveres uma
-                     versão maior, volta a gerar a imagem)
-- rzn-app.jpg
-- musa.jpg
+Já com o logótipo do projecto (composição sobre fundo da marca), com o
+sufixo "-capa" para evitar imagens antigas em cache; o caminho está no campo
+"imagem" de cada projecto:
+- pulmovision-capa.jpg
+- quanta-learn-capa.jpg  (logótipo de origem em baixa resolução)
+- rzn-app-capa.jpg
+- musa-capa.jpg
 
 Ainda placeholders automáticos (substitui por capturas de ecrã reais):
 - medinova.jpg
