@@ -6,14 +6,13 @@ import { LigacaoBotao } from "@/componentes/ui/Botao";
 const factos = [
   { rotulo: "Localidade", valor: perfil.localidade },
   { rotulo: "Formação", valor: percurso[0].titulo },
-  { rotulo: "Fundador", valor: "QUANTA" },
   { rotulo: "Disponibilidade", valor: perfil.disponibilidade },
 ];
 
 export function SobreMim() {
   return (
     <section className="contentor py-16 md:py-24" id="sobre">
-      <CabecalhoSeccao etiqueta="Sobre" titulo="Engenharia de software com inteligência artificial aplicada." />
+      <CabecalhoSeccao titulo="Engenharia de software com inteligência artificial aplicada." />
 
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:gap-20">
         <div>

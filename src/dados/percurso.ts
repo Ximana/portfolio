@@ -10,11 +10,11 @@ export const percurso: EtapaPercurso[] = [
     tipo: "academico",
   },
   {
-    periodo: "Em curso",
-    titulo: "Fundador",
-    instituicao: "QUANTA",
+    periodo: "Anterior",
+    titulo: "Desenvolvedor Full-Stack",
+    instituicao: "QUANTA (startup)",
     descricao:
-      "Startup com dois projectos principais: PulmoVision (detecção de doenças pulmonares) e QUANTA Learn (aprendizagem de inglês).",
+      "Participei na startup e desenvolvi a QUANTA Learn (aprendizagem de inglês) e a Agenda QUANTA (agenda escolar).",
     tipo: "profissional",
   },
   {

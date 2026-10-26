@@ -9,7 +9,7 @@ export function Reconhecimentos() {
 
   return (
     <section className="py-16 md:py-20">
-      <CabecalhoSeccao etiqueta="Marcos" titulo="Reconhecimentos" />
+      <CabecalhoSeccao titulo="Reconhecimentos" />
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         {reconhecimentos.map((item, indice) => {
           const projecto = projectos.find((p) => p.slug === item.projecto);

@@ -11,8 +11,7 @@ export function Contacto() {
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(520px_280px_at_50%_0%,rgb(var(--cor-jade)/0.16),transparent_70%)]"
         />
         <div className="relative">
-          <p className="etiqueta-mono">04 / Contacto</p>
-          <h2 className="mx-auto mt-5 max-w-2xl text-3xl font-semibold md:text-5xl">
+          <h2 className="mx-auto max-w-2xl text-3xl font-semibold md:text-5xl">
             Vamos construir algo juntos?
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-lg leading-8 text-esbatido">

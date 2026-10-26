@@ -11,7 +11,6 @@ export function Projectos() {
   return (
     <section className="contentor py-16 md:py-24" id="projectos">
       <CabecalhoSeccao
-        etiqueta="Projectos"
         titulo="Trabalho seleccionado"
         descricao="Produtos reais, da saúde à educação e ao desporto, construídos de ponta a ponta."
         accao={

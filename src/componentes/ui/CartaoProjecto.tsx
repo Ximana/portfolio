@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Projecto } from "@/tipos";
-import { IconeSeta } from "@/componentes/icones/Icones";
 import { Cartao } from "@/componentes/ui/Cartao";
 import { Etiqueta } from "@/componentes/ui/Etiqueta";
 import { imagemProjecto } from "@/utilitarios/imagemProjecto";
@@ -70,7 +69,6 @@ export function CartaoProjecto({
 
           <span className="mt-auto inline-flex items-center gap-2 pt-8 text-sm font-medium text-jade">
             Ver projecto
-            <IconeSeta tamanho={16} className="transition-transform duration-200 group-hover:translate-x-1" />
           </span>
         </div>
       </Cartao>

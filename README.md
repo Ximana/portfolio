@@ -50,7 +50,7 @@ portfolio-paulo-ximana/
     │   ├── layout/          Cabeçalho, rodapé, alternador de tema
     │   ├── seccoes/         Blocos de conteúdo (Herói, Cartão de código, Sobre, Projectos, Competências, Formulário de Contacto…)
     │   ├── ui/              Componentes base reutilizáveis (Botão, Cartão, Etiqueta…)
-    │   └── icones/          Ícones e o monograma "PX"
+    │   └── icones/          Ícones
     ├── dados/               Conteúdo do site (perfil, projectos, competências, percurso)
     ├── tipos/               Tipos TypeScript partilhados
     ├── utilitarios/         Funções auxiliares (ex.: combinação de classes CSS)
@@ -63,7 +63,7 @@ portfolio-paulo-ximana/
 
 ## Ícone do site
 
-`src/app/icon.tsx` e `src/app/apple-icon.tsx` geram o favicon e o ícone para dispositivos Apple dinamicamente a partir do monograma "PX" (sem depender de nenhuma imagem exportada à parte). Para usar antes uma imagem própria, basta substituir estes ficheiros por `icon.png` / `apple-icon.png` na mesma pasta.
+`src/app/icon.tsx` e `src/app/apple-icon.tsx` geram o favicon e o ícone para dispositivos Apple dinamicamente a partir da letra "P" (sem depender de nenhuma imagem exportada à parte). Para usar antes uma imagem própria, basta substituir estes ficheiros por `icon.png` / `apple-icon.png` na mesma pasta.
 
 ## Tema claro/escuro
 
@@ -81,7 +81,7 @@ Todas as imagens do site, a fotografia de perfil e as capturas de ecrã dos proj
 | `public/imagens/projectos/pulmovision.jpg` | 1200×675px (16:9) | Cartão e página de detalhe da PulmoVision |
 | `public/imagens/projectos/quanta-learn.jpg` | 1200×675px (16:9) | Cartão e página de detalhe da QUANTA Learn |
 | `public/imagens/projectos/hadoop-saude-angola.jpg` | 1200×675px (16:9) | Cartão e página de detalhe da análise de saúde com Hadoop |
-| `public/imagens/projectos/medinova.jpg` | 1200×675px (16:9) | Cartão e página de detalhe do MediNova |
+| `public/imagens/projectos/rikoa-sgh-capa.jpg` | 1200×675px (16:9) | Cartão e página de detalhe do Rikoa SGH |
 | `public/imagens/projectos/rzn-app.jpg` | 1200×675px (16:9) | Cartão e página de detalhe da RZN App |
 | `public/imagens/projectos/okuyeva.jpg` | 1200×675px (16:9) | Cartão e página de detalhe do Okuyeva |
 | `public/imagens/projectos/musa.jpg` | 1200×675px (16:9) | Cartão e página de detalhe do website da MUSA |
@@ -120,7 +120,7 @@ A imagem de fundo do hero é `public/imagens/hero/fundo-hero.svg` (vector, funci
 O que já está configurado no código:
 
 - **Metadados por página** (`src/utilitarios/seo.ts`, função `criarMetadata`): título, descrição, URL canónico, `hreflang` (pt-AO), Open Graph e Twitter Cards. O texto de cada página está em `export const metadata` do respectivo `page.tsx`.
-- **Dados estruturados JSON-LD** (`src/componentes/seo/DadosEstruturados.tsx`): `WebSite` e `Person` em todo o site (com formação, QUANTA, competências e redes sociais), `ProfilePage` em /sobre, `CollectionPage` + `ItemList` em /projectos, `CreativeWork` em cada projecto, `ContactPage` em /contacto e `BreadcrumbList` em todas as páginas interiores. É isto que ajuda o Google a ligar o teu nome ao teu perfil.
+- **Dados estruturados JSON-LD** (`src/componentes/seo/DadosEstruturados.tsx`): `WebSite` e `Person` em todo o site (com formação, competências e redes sociais), `ProfilePage` em /sobre, `CollectionPage` + `ItemList` em /projectos, `CreativeWork` em cada projecto, `ContactPage` em /contacto e `BreadcrumbList` em todas as páginas interiores. É isto que ajuda o Google a ligar o teu nome ao teu perfil.
 - **Imagens de partilha** geradas automaticamente (`opengraph-image.tsx` e `twitter-image.tsx`, geral e por projecto), para links no WhatsApp, LinkedIn, X e Facebook aparecerem com pré-visualização.
 - **`sitemap.xml`** (`src/app/sitemap.ts`), **`robots.txt`** (`src/app/robots.ts`) e **`manifest.webmanifest`** (`src/app/manifest.ts`), todos gerados a partir dos dados do site. Ao adicionar um projecto em `src/dados/projectos.ts`, entra sozinho no sitemap. Actualiza a data `ultimaActualizacao` em `sitemap.ts` quando mudares o conteúdo.
 - **Página 404 com `noindex`**, cabeçalhos de segurança, imagens em AVIF/WebP e HTML semântico (um `h1` por página, `lang="pt-AO"`, textos alternativos), que ajudam no desempenho e na acessibilidade, ambos usados pelo Google no ranking.

@@ -10,7 +10,7 @@
     Tema claro. Valores em "R G B" (sem vírgulas) para que as classes Tailwind
     com opacidade (ex.: bg-jade/10) continuem a funcionar.
   */
-  --cor-fundo: 247 248 246;
+  --cor-fundo: 252 253 252;
   --cor-superficie: 255 255 255;
   --cor-linha: 222 227 224;
   --cor-marfim: 16 22 24;

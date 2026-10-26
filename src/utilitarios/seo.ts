@@ -86,7 +86,6 @@ export function dadosPessoa() {
     },
     nationality: { "@type": "Country", name: "Angola" },
     alumniOf: { "@type": "CollegeOrUniversity", name: perfil.instituicao },
-    worksFor: { "@type": "Organization", name: "QUANTA" },
     knowsAbout: gruposCompetencias.flatMap((grupo) => grupo.itens),
     knowsLanguage: "pt",
     sameAs: perfil.redesSociais.map((rede) => rede.url),

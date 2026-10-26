@@ -24,7 +24,7 @@ export default function Icone() {
             letterSpacing: -1,
           }}
         >
-          PX
+          P
         </span>
       </div>
     ),

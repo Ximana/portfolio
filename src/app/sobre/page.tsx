@@ -11,7 +11,7 @@ import { RevelarAoRolar } from "@/componentes/ui/RevelarAoRolar";
 export const metadata: Metadata = criarMetadata({
   titulo: "Sobre mim: licenciado em Ciências da Computação",
   descricao:
-    "Percurso de Paulo Ximana: licenciado em Ciências da Computação, desenvolvedor full-stack e fundador da QUANTA, em Luanda, Angola.",
+    "Percurso de Paulo Ximana: licenciado em Ciências da Computação, desenvolvedor full-stack em Luanda, Angola.",
   caminho: "/sobre",
   tipo: "profile",
 });
@@ -62,8 +62,7 @@ export default function PaginaSobre() {
         </aside>
 
         <div>
-          <p className="etiqueta-mono">{perfil.cargo}</p>
-          <h1 className="mt-4 text-4xl font-semibold md:text-5xl">Sobre mim</h1>
+          <h1 className="text-4xl font-semibold md:text-5xl">Sobre mim</h1>
 
           <p className="mt-8 max-w-conteudo text-xl leading-9 text-marfim/90">{introducao}</p>
           <div className="mt-6 max-w-conteudo space-y-5">

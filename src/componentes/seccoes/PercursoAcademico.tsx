@@ -6,7 +6,7 @@ import { RevelarAoRolar } from "@/componentes/ui/RevelarAoRolar";
 export function PercursoAcademico() {
   return (
     <section className="py-16 md:py-20">
-      <CabecalhoSeccao etiqueta="Percurso" titulo="Formação e experiência" />
+      <CabecalhoSeccao titulo="Formação e experiência" />
 
       <ol className="relative ml-2 border-l border-linha">
         {percurso.map((etapa, indice) => {

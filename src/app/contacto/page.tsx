@@ -34,8 +34,7 @@ export default function PaginaContacto() {
       />
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
         <div>
-          <p className="etiqueta-mono">Contacto</p>
-          <h1 className="mt-4 text-4xl font-semibold md:text-5xl">Vamos conversar.</h1>
+          <h1 className="text-4xl font-semibold md:text-5xl">Vamos conversar.</h1>
           <p className="mt-6 max-w-conteudo text-lg leading-8 text-esbatido">
             {perfil.disponibilidade}. Envie-me uma mensagem com os detalhes e respondo o mais brevemente possível.
           </p>

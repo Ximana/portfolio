@@ -8,9 +8,11 @@ sufixo "-capa" para evitar imagens antigas em cache; o caminho está no campo
 - quanta-learn-capa.jpg  (logótipo de origem em baixa resolução)
 - rzn-app-capa.jpg
 - musa-capa.jpg
+- rikoa-sgh-capa.jpg
+- agenda-quanta-capa.jpg
+- meteo-capa.jpg
 
 Ainda placeholders automáticos (substitui por capturas de ecrã reais):
-- medinova.jpg
 - okuyeva.jpg
 - hadoop-saude-angola.jpg
 

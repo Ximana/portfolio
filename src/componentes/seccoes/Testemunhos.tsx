@@ -8,7 +8,7 @@ export function Testemunhos() {
 
   return (
     <section className="contentor py-16 md:py-24" id="testemunhos">
-      <CabecalhoSeccao etiqueta="Testemunhos" titulo="O que dizem sobre o meu trabalho" />
+      <CabecalhoSeccao titulo="O que dizem sobre o meu trabalho" />
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         {testemunhos.map((item, indice) => (
           <RevelarAoRolar key={item.autor} atraso={indice * 80} className="h-full">

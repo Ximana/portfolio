@@ -17,7 +17,6 @@ export function Competencias() {
   return (
     <section className="contentor py-16 md:py-24" id="competencias">
       <CabecalhoSeccao
-        etiqueta="Competências"
         titulo="Tecnologias e áreas de actuação"
         descricao="Das interfaces ao modelo de aprendizagem, o conjunto de ferramentas com que trabalho."
       />

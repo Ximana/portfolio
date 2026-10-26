@@ -24,7 +24,7 @@ export default function IconeApple() {
             letterSpacing: -4,
           }}
         >
-          PX
+          P
         </span>
       </div>
     ),

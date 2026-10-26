@@ -20,19 +20,8 @@ export function Heroi() {
       <div className="contentor pb-20 pt-16 md:pb-28 md:pt-24">
       <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
         <div className="min-w-0">
-          <p
-            className="entrada-heroi inline-flex items-center gap-2.5 rounded-full border border-linha bg-superficie/70 py-1.5 pl-3 pr-4 font-mono text-xs text-esbatido"
-            style={atraso(0)}
-          >
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-jade opacity-70" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-jade" />
-            </span>
-            {perfil.localidade}
-          </p>
-
           <h1
-            className="entrada-heroi mt-8 text-5xl font-semibold leading-[1.02] sm:text-6xl lg:text-7xl"
+            className="entrada-heroi text-5xl font-semibold leading-[1.02] sm:text-6xl lg:text-7xl"
             style={atraso(90)}
           >
             {perfil.nome}

@@ -24,7 +24,6 @@ export function CartaoCodigo() {
     { chave: "funcao", valor: <Texto valor="Desenvolvedor Full-Stack" /> },
     { chave: "localidade", valor: <Texto valor={perfil.localidade} /> },
     { chave: "formacao", valor: <Texto valor="Licenciatura em Ciências da Computação" /> },
-    { chave: "fundador", valor: <Texto valor="QUANTA" /> },
     {
       chave: "stack",
       valor: (

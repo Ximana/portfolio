@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { IconeSeta } from "@/componentes/icones/Icones";
-import { LogotipoPX } from "@/componentes/icones/LogotipoPX";
 import { AlternadorTema } from "@/componentes/layout/AlternadorTema";
 import { LigacaoBotao } from "@/componentes/ui/Botao";
 import { useDeteccaoScroll } from "@/ganchos/useDeteccaoScroll";
@@ -56,8 +55,7 @@ export function Cabecalho() {
           className="group flex items-center gap-3 text-marfim"
           onClick={() => definirMenuAberto(false)}
         >
-          <LogotipoPX tamanho={28} />
-          <span className="hidden text-sm font-semibold tracking-tight sm:inline">{perfil.nome}</span>
+          <span className="text-sm font-semibold tracking-tight">{perfil.nome}</span>
         </Link>
 
         {/* Navegação de ecrã largo */}

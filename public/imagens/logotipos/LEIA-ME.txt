@@ -1,2 +1,2 @@
-Logótipos originais dos projectos (pulmovision.png, quanta-learn.png, rzn-app.png, musa.png).
+Logótipos originais dos projectos (pulmovision.png, quanta-learn.png, rzn-app.png, musa.png, rikoa-sgh.png, meteo.svg).
 Já estão incluídos nas imagens de capa em public/imagens/projectos/ e não são mostrados à parte nas páginas.

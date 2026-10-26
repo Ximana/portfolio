@@ -84,11 +84,7 @@ export default async function PaginaProjecto({ params }: PropsPagina) {
       </nav>
 
       <header className="mt-8 max-w-3xl">
-        <div className="flex items-center gap-2 font-mono text-xs text-esbatido">
-          <span className={`h-1.5 w-1.5 rounded-full ${infoEstado.corPonto}`} />
-          {infoEstado.rotulo}
-        </div>
-        <h1 className="mt-4 text-4xl font-semibold md:text-6xl">{projecto.nome}</h1>
+        <h1 className="text-4xl font-semibold md:text-6xl">{projecto.nome}</h1>
         <p className="mt-5 text-xl leading-8 text-esbatido">{projecto.resumo}</p>
       </header>
 
@@ -140,12 +136,12 @@ export default async function PaginaProjecto({ params }: PropsPagina) {
             <div className="flex flex-col gap-3 border-t border-linha pt-6">
                 {projecto.url && (
                   <LigacaoBotao href={projecto.url} target="_blank" rel="noopener noreferrer" variante="primario">
-                    Ver site
+                    Ver projecto online
                   </LigacaoBotao>
                 )}
                 {projecto.urlCodigo && (
                   <LigacaoBotao href={projecto.urlCodigo} target="_blank" rel="noopener noreferrer" variante="secundario">
-                    Ver código
+                    Ver no GitHub
                   </LigacaoBotao>
                 )}
               <LigacaoBotao

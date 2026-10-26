@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
 
 interface PropsCabecalhoSeccao {
-  etiqueta: string;
   titulo: string;
   descricao?: string;
   /** Elemento alinhado à direita (ex.: ligação "Ver todos"). */
@@ -11,7 +10,6 @@ interface PropsCabecalhoSeccao {
 }
 
 export function CabecalhoSeccao({
-  etiqueta,
   titulo,
   descricao,
   accao,
@@ -22,12 +20,11 @@ export function CabecalhoSeccao({
   return (
     <header className="mb-12 flex flex-col gap-6 md:mb-14 md:flex-row md:items-end md:justify-between">
       <div className="max-w-2xl">
-        <p className="etiqueta-mono">{etiqueta}</p>
         <Titulo
           className={
             nivel === "h1"
-              ? "mt-4 text-4xl font-semibold md:text-5xl"
-              : "mt-4 text-3xl font-semibold md:text-4xl"
+              ? "text-4xl font-semibold md:text-5xl"
+              : "text-3xl font-semibold md:text-4xl"
           }
         >
           {titulo}
